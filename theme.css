@@ -1,0 +1,660 @@
+/* Clawdia — Obsidian Theme */
+/* Ancient cat. Gothic warmth. Creamy shadows and ember glow. */
+
+/* ============================================================
+   FONT FACES (optional - Obsidian bundles these)
+   ============================================================ */
+
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
+.theme-light,
+.theme-dark {
+  /* --- Clawdia Palette --- */
+  --clawdia-cream-100: #fdf8f0;
+  --clawdia-cream-200: #f5ead6;
+  --clawdia-cream-300: #ede0c4;
+  --clawdia-cream-400: #d4c5a3;
+  --clawdia-cream-500: #b5a07c;
+
+  --clawdia-ember-100: #ffe8cc;
+  --clawdia-ember-200: #ffcb8a;
+  --clawdia-ember-300: #f5a43a;
+  --clawdia-ember-400: #d4821a;
+  --clawdia-ember-500: #a05e0e;
+
+  --clawdia-rust-100: #f5ddd0;
+  --clawdia-rust-200: #e8b89a;
+  --clawdia-rust-300: #cc7a52;
+  --clawdia-rust-400: #a05030;
+  --clawdia-rust-500: #6e3520;
+
+  --clawdia-plum-100: #e8d8e8;
+  --clawdia-plum-200: #c8a8c8;
+  --clawdia-plum-300: #9a6a9a;
+  --clawdia-plum-400: #6e4870;
+  --clawdia-plum-500: #3e2240;
+
+  --clawdia-shadow-100: #2c2418;
+  --clawdia-shadow-200: #1e1810;
+  --clawdia-shadow-300: #140e08;
+
+  --clawdia-moss-300: #7a8c62;
+  --clawdia-moss-400: #556640;
+  --clawdia-gold: #c8943a;
+  --clawdia-moonstone: #b8ccd8;
+}
+
+/* ============================================================
+   LIGHT THEME
+   ============================================================ */
+.theme-light {
+  --background-primary: var(--clawdia-cream-100);
+  --background-primary-alt: var(--clawdia-cream-200);
+  --background-secondary: var(--clawdia-cream-200);
+  --background-secondary-alt: var(--clawdia-cream-300);
+  --background-modifier-border: var(--clawdia-cream-400);
+  --background-modifier-border-hover: var(--clawdia-cream-500);
+  --background-modifier-border-focus: var(--clawdia-ember-300);
+  --background-modifier-form-field: var(--clawdia-cream-100);
+  --background-modifier-box-shadow: rgba(80, 50, 20, 0.12);
+  --background-modifier-success: #d4e8c4;
+  --background-modifier-error: #f5d4c8;
+  --background-modifier-error-rgb: 245, 212, 200;
+  --background-modifier-cover: rgba(60, 40, 20, 0.4);
+
+  --text-normal: #2c2010;
+  --text-muted: #7a6848;
+  --text-faint: #a09070;
+  --text-on-accent: #fdf8f0;
+  --text-error: #8c3820;
+  --text-warning: #7a5010;
+  --text-success: #3a6020;
+  --text-selection: rgba(212, 130, 26, 0.25);
+  --text-accent: var(--clawdia-ember-400);
+  --text-accent-hover: var(--clawdia-ember-500);
+
+  --interactive-normal: var(--clawdia-cream-200);
+  --interactive-hover: var(--clawdia-cream-300);
+  --interactive-accent: var(--clawdia-ember-400);
+  --interactive-accent-rgb: 212, 130, 26;
+  --interactive-accent-hover: var(--clawdia-ember-500);
+  --interactive-success: #4a7a2a;
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--clawdia-cream-400);
+  --scrollbar-active-thumb-bg: var(--clawdia-cream-500);
+
+  --highlight-mix-blend-mode: multiply;
+}
+
+/* ============================================================
+   DARK THEME  (default — Clawdia's natural habitat)
+   ============================================================ */
+.theme-dark {
+  --background-primary: #1a140c;
+  --background-primary-alt: #221a10;
+  --background-secondary: #1e1710;
+  --background-secondary-alt: #281e14;
+  --background-modifier-border: #3a2e1e;
+  --background-modifier-border-hover: #4a3c28;
+  --background-modifier-border-focus: var(--clawdia-ember-400);
+  --background-modifier-form-field: #1e1710;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
+  --background-modifier-success: #1e3018;
+  --background-modifier-error: #3c1a10;
+  --background-modifier-error-rgb: 60, 26, 16;
+  --background-modifier-cover: rgba(10, 6, 2, 0.65);
+
+  --text-normal: #e8d8bc;
+  --text-muted: #9a8868;
+  --text-faint: #6a5a44;
+  --text-on-accent: #1a140c;
+  --text-error: #e89878;
+  --text-warning: #d4a860;
+  --text-success: #98c870;
+  --text-selection: rgba(212, 130, 26, 0.3);
+  --text-accent: var(--clawdia-ember-200);
+  --text-accent-hover: var(--clawdia-ember-100);
+
+  --interactive-normal: #281e14;
+  --interactive-hover: #342818;
+  --interactive-accent: var(--clawdia-ember-300);
+  --interactive-accent-rgb: 245, 164, 58;
+  --interactive-accent-hover: var(--clawdia-ember-200);
+  --interactive-success: #70a848;
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: #3a2e1e;
+  --scrollbar-active-thumb-bg: #4a3c28;
+
+  --highlight-mix-blend-mode: lighten;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+body {
+  --font-text-theme: "Georgia", "Palatino", serif;
+  --font-interface-theme: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-monospace-theme: "Fira Code", "Cascadia Code", "Consolas", monospace;
+
+  --font-text-size: 16px;
+  --font-ui-small: 13px;
+  --font-ui-smaller: 11px;
+  --font-ui-medium: 15px;
+  --font-ui-large: 18px;
+
+  --line-height-normal: 1.75;
+  --line-height-tight: 1.4;
+}
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+.theme-dark {
+  --h1-color: var(--clawdia-ember-200);
+  --h2-color: var(--clawdia-ember-100);
+  --h3-color: var(--clawdia-cream-200);
+  --h4-color: var(--clawdia-cream-300);
+  --h5-color: var(--clawdia-cream-400);
+  --h6-color: var(--clawdia-cream-500);
+
+  --h1-font: var(--font-text-theme);
+  --h1-size: 1.8em;
+  --h1-weight: 700;
+  --h1-style: normal;
+  --h1-line-height: 1.2;
+
+  --h2-font: var(--font-text-theme);
+  --h2-size: 1.45em;
+  --h2-weight: 600;
+  --h2-style: italic;
+  --h2-line-height: 1.3;
+
+  --h3-font: var(--font-interface-theme);
+  --h3-size: 1.2em;
+  --h3-weight: 600;
+  --h3-style: normal;
+
+  --h4-font: var(--font-interface-theme);
+  --h4-size: 1.05em;
+  --h4-weight: 600;
+  --h4-style: normal;
+}
+
+.theme-light {
+  --h1-color: var(--clawdia-ember-500);
+  --h2-color: var(--clawdia-ember-400);
+  --h3-color: var(--clawdia-rust-400);
+  --h4-color: var(--clawdia-shadow-100);
+  --h5-color: var(--clawdia-cream-500);
+  --h6-color: var(--clawdia-cream-500);
+
+  --h1-font: var(--font-text-theme);
+  --h1-size: 1.8em;
+  --h1-weight: 700;
+  --h1-style: normal;
+  --h2-font: var(--font-text-theme);
+  --h2-size: 1.45em;
+  --h2-weight: 600;
+  --h2-style: italic;
+  --h3-font: var(--font-interface-theme);
+  --h3-size: 1.2em;
+  --h3-weight: 600;
+  --h3-style: normal;
+}
+
+/* ============================================================
+   INLINE ELEMENTS
+   ============================================================ */
+.theme-dark {
+  --bold-color: var(--clawdia-ember-200);
+  --italic-color: var(--clawdia-cream-300);
+  --bold-weight: 700;
+}
+
+.theme-light {
+  --bold-color: var(--clawdia-ember-400);
+  --italic-color: var(--clawdia-rust-400);
+  --bold-weight: 700;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+.theme-dark {
+  --link-color: var(--clawdia-ember-200);
+  --link-color-hover: var(--clawdia-ember-100);
+  --link-unresolved-color: var(--clawdia-plum-300);
+  --link-unresolved-opacity: 0.8;
+  --link-unresolved-decoration-style: dashed;
+  --link-external-color: var(--clawdia-moonstone);
+  --link-external-color-hover: #d4e8f0;
+}
+
+.theme-light {
+  --link-color: var(--clawdia-ember-400);
+  --link-color-hover: var(--clawdia-ember-500);
+  --link-unresolved-color: var(--clawdia-plum-400);
+  --link-external-color: #3a6a8a;
+}
+
+/* ============================================================
+   TAGS
+   ============================================================ */
+.theme-dark {
+  --tag-color: var(--clawdia-ember-200);
+  --tag-background: rgba(245, 164, 58, 0.12);
+  --tag-background-hover: rgba(245, 164, 58, 0.22);
+  --tag-border-color: rgba(245, 164, 58, 0.3);
+  --tag-border-width: 1px;
+  --tag-padding-x: 8px;
+  --tag-padding-y: 2px;
+  --tag-radius: 4px;
+}
+
+.theme-light {
+  --tag-color: var(--clawdia-ember-500);
+  --tag-background: rgba(160, 80, 14, 0.08);
+  --tag-background-hover: rgba(160, 80, 14, 0.16);
+  --tag-border-color: rgba(160, 80, 14, 0.25);
+  --tag-border-width: 1px;
+  --tag-padding-x: 8px;
+  --tag-padding-y: 2px;
+  --tag-radius: 4px;
+}
+
+/* ============================================================
+   CODE BLOCKS
+   ============================================================ */
+.theme-dark {
+  --code-background: #100c06;
+  --code-normal: #d4c8a0;
+  --code-comment: #6a5a44;
+  --code-function: var(--clawdia-ember-200);
+  --code-important: var(--clawdia-rust-200);
+  --code-keyword: var(--clawdia-plum-200);
+  --code-operator: var(--clawdia-cream-400);
+  --code-property: var(--clawdia-moonstone);
+  --code-punctuation: #7a6848;
+  --code-string: var(--clawdia-moss-300);
+  --code-tag: var(--clawdia-rust-300);
+  --code-value: var(--clawdia-ember-300);
+}
+
+.theme-light {
+  --code-background: var(--clawdia-cream-300);
+  --code-normal: #2c2010;
+  --code-comment: var(--clawdia-cream-500);
+  --code-function: var(--clawdia-ember-500);
+  --code-keyword: var(--clawdia-plum-400);
+  --code-string: var(--clawdia-moss-400);
+  --code-value: var(--clawdia-rust-400);
+}
+
+/* ============================================================
+   BLOCKQUOTES
+   ============================================================ */
+.theme-dark blockquote {
+  border-left: 3px solid var(--clawdia-ember-400) !important;
+  background: rgba(212, 130, 26, 0.06);
+  padding: 0.75em 1.25em;
+  border-radius: 0 4px 4px 0;
+  color: var(--clawdia-cream-300);
+  font-style: italic;
+}
+
+.theme-light blockquote {
+  border-left: 3px solid var(--clawdia-ember-300) !important;
+  background: rgba(212, 130, 26, 0.07);
+  padding: 0.75em 1.25em;
+  border-radius: 0 4px 4px 0;
+  color: var(--clawdia-rust-400);
+  font-style: italic;
+}
+
+/* ============================================================
+   HORIZONTAL RULES
+   ============================================================ */
+.theme-dark hr {
+  border: none;
+  border-top: 1px solid #3a2e1e;
+  margin: 2em 0;
+  position: relative;
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+.theme-dark {
+  --table-border-color: #3a2e1e;
+  --table-border-width: 1px;
+  --table-header-background: #221a10;
+  --table-header-background-hover: #2a2014;
+  --table-row-background-hover: rgba(245, 164, 58, 0.05);
+  --table-column-max-width: 400px;
+  --table-column-min-width: 100px;
+  --table-column-first-border: none;
+  --table-column-last-border: none;
+  --table-row-last-border: none;
+  --table-header-border: 2px solid var(--clawdia-ember-400);
+  --table-header-color: var(--clawdia-ember-200);
+}
+
+/* ============================================================
+   CALLOUTS
+   ============================================================ */
+.theme-dark {
+  --callout-default: var(--clawdia-cream-500);
+  --callout-info: var(--clawdia-moonstone);
+  --callout-warning: var(--clawdia-ember-300);
+  --callout-danger: var(--clawdia-rust-300);
+  --callout-success: var(--clawdia-moss-300);
+  --callout-tip: var(--clawdia-gold);
+  --callout-question: var(--clawdia-plum-300);
+  --callout-quote: var(--clawdia-cream-400);
+}
+
+/* ============================================================
+   LEFT SIDEBAR & FILE EXPLORER
+   ============================================================ */
+.theme-dark .nav-folder-title,
+.theme-dark .nav-file-title {
+  border-radius: 4px;
+  padding: 2px 8px;
+  color: var(--clawdia-cream-300);
+}
+
+.theme-dark .nav-file-title:hover,
+.theme-dark .nav-folder-title:hover {
+  background: rgba(245, 164, 58, 0.08);
+  color: var(--clawdia-ember-200);
+}
+
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active {
+  background: rgba(245, 164, 58, 0.15);
+  color: var(--clawdia-ember-200);
+  font-weight: 600;
+}
+
+.theme-dark .nav-folder-title-content {
+  font-weight: 500;
+  color: var(--clawdia-ember-300);
+}
+
+/* ============================================================
+   TABS
+   ============================================================ */
+.theme-dark {
+  --tab-text-color: var(--clawdia-cream-400);
+  --tab-text-color-focused: var(--clawdia-cream-200);
+  --tab-text-color-focused-active: var(--clawdia-ember-200);
+  --tab-text-color-active: var(--clawdia-cream-200);
+  --tab-background-active: var(--background-primary);
+  --tab-outline-color: var(--clawdia-ember-400);
+  --tab-divider-color: #3a2e1e;
+  --tab-radius: 6px 6px 0 0;
+  --tab-radius-active: 6px 6px 0 0;
+}
+
+/* ============================================================
+   TITLE BAR
+   ============================================================ */
+.theme-dark .titlebar-text {
+  color: var(--clawdia-cream-300);
+  font-style: italic;
+}
+
+/* ============================================================
+   STATUS BAR
+   ============================================================ */
+.theme-dark .status-bar {
+  background: #100c06;
+  border-top: 1px solid #3a2e1e;
+  color: var(--clawdia-cream-500);
+}
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+.theme-dark {
+  --search-clear-button-color: var(--clawdia-cream-400);
+  --search-icon-color: var(--clawdia-cream-400);
+  --search-result-background: var(--background-primary-alt);
+}
+
+.theme-dark .search-result-file-matched-text {
+  color: var(--clawdia-ember-200);
+  background: rgba(245, 164, 58, 0.18);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* ============================================================
+   GRAPH VIEW
+   ============================================================ */
+.theme-dark {
+  --graph-line: #3a2e1e;
+  --graph-node: var(--clawdia-cream-500);
+  --graph-node-unresolved: var(--clawdia-plum-400);
+  --graph-node-focused: var(--clawdia-ember-300);
+  --graph-node-tag: var(--clawdia-gold);
+  --graph-node-attachment: var(--clawdia-moonstone);
+  --graph-text: var(--clawdia-cream-300);
+}
+
+/* ============================================================
+   CHECKBOXES / TASKS
+   ============================================================ */
+.theme-dark input[type=checkbox] {
+  border: 1.5px solid var(--clawdia-cream-500);
+}
+
+.theme-dark input[type=checkbox]:checked {
+  background-color: var(--clawdia-ember-400);
+  border-color: var(--clawdia-ember-400);
+}
+
+.theme-dark .task-list-item-checkbox {
+  border: 1.5px solid var(--clawdia-cream-500);
+}
+
+.theme-dark .task-list-item.is-checked > .task-list-item-checkbox {
+  background-color: var(--clawdia-ember-400);
+  border-color: var(--clawdia-ember-400);
+}
+
+.theme-dark .task-list-item.is-checked > p,
+.theme-dark .task-list-item.is-checked {
+  color: var(--clawdia-cream-500);
+  text-decoration: line-through;
+  text-decoration-color: var(--clawdia-ember-400);
+}
+
+/* ============================================================
+   HIGHLIGHTS
+   ============================================================ */
+.theme-dark mark {
+  background: rgba(212, 130, 26, 0.3);
+  color: var(--clawdia-ember-100);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.theme-light mark {
+  background: rgba(245, 164, 58, 0.25);
+  color: var(--clawdia-ember-500);
+}
+
+/* ============================================================
+   STACKED EDITOR / INLINE TITLE
+   ============================================================ */
+.theme-dark .inline-title {
+  color: var(--clawdia-ember-200);
+  font-family: var(--font-text-theme);
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: -0.01em;
+}
+
+.theme-light .inline-title {
+  color: var(--clawdia-ember-500);
+  font-family: var(--font-text-theme);
+  font-weight: 700;
+  font-size: 2em;
+}
+
+/* ============================================================
+   MODALS
+   ============================================================ */
+.theme-dark .modal {
+  background: var(--background-primary);
+  border: 1px solid #3a2e1e;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(245, 164, 58, 0.08);
+}
+
+.theme-dark .modal-title {
+  color: var(--clawdia-ember-200);
+  font-family: var(--font-text-theme);
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* ============================================================
+   PROMPT / COMMAND PALETTE
+   ============================================================ */
+.theme-dark .prompt {
+  background: #100c06;
+  border: 1px solid #4a3c28;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
+}
+
+.theme-dark .prompt-input {
+  color: var(--clawdia-cream-200);
+  background: transparent;
+  border-bottom: 1px solid #3a2e1e;
+}
+
+.theme-dark .suggestion-item.is-selected {
+  background: rgba(245, 164, 58, 0.12);
+  color: var(--clawdia-ember-200);
+  border-radius: 4px;
+}
+
+/* ============================================================
+   CANVAS
+   ============================================================ */
+.theme-dark {
+  --canvas-background: #140e08;
+  --canvas-dot-color: #2c2418;
+  --canvas-card-background: var(--background-primary);
+  --canvas-card-border: #3a2e1e;
+  --canvas-card-border-hover: var(--clawdia-ember-400);
+}
+
+/* ============================================================
+   SCROLLBARS
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  background: #3a2e1e;
+  border-radius: 3px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background: #4a3c28;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: var(--clawdia-cream-400);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.theme-dark button.mod-cta {
+  background: var(--clawdia-ember-400);
+  color: #1a140c;
+  font-weight: 600;
+  border: none;
+}
+
+.theme-dark button.mod-cta:hover {
+  background: var(--clawdia-ember-300);
+}
+
+/* ============================================================
+   PROPERTIES PANEL
+   ============================================================ */
+.theme-dark .metadata-container {
+  background: rgba(34, 26, 16, 0.6);
+  border: 1px solid #3a2e1e;
+  border-radius: 6px;
+  padding: 0.5em;
+}
+
+.theme-dark .metadata-property-key {
+  color: var(--clawdia-ember-300);
+  font-weight: 500;
+}
+
+/* ============================================================
+   DIVIDER / RESIZE HANDLE
+   ============================================================ */
+.theme-dark .workspace-split.mod-horizontal > .workspace-split-resize-handle,
+.theme-dark .workspace-split.mod-vertical > .workspace-split-resize-handle {
+  background: #3a2e1e;
+}
+
+.theme-dark .workspace-split.mod-horizontal > .workspace-split-resize-handle:hover,
+.theme-dark .workspace-split.mod-vertical > .workspace-split-resize-handle:hover {
+  background: var(--clawdia-ember-400);
+}
+
+/* ============================================================
+   FOLDING ARROWS
+   ============================================================ */
+.theme-dark .collapse-icon svg path {
+  stroke: var(--clawdia-cream-500);
+}
+
+.theme-dark .collapse-icon:hover svg path {
+  stroke: var(--clawdia-ember-200);
+}
+
+/* ============================================================
+   READING VIEW — pull quote ornaments
+   ============================================================ */
+.theme-dark .markdown-rendered h1::before,
+.theme-dark .markdown-source-view.mod-cm6 .HyperMD-header-1::before {
+  content: "✦ ";
+  color: var(--clawdia-ember-400);
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   SIGNATURE — subtle paw watermark on empty workspace
+   (CSS-only, no images required)
+   ============================================================ */
+.theme-dark .workspace-leaf-content[data-type="empty"] .view-content::after {
+  content: "𓃠";
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: rgba(245, 164, 58, 0.06);
+  pointer-events: none;
+  user-select: none;
+}
