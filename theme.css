@@ -2,163 +2,160 @@
 /* Ancient cat. Gothic warmth. Creamy shadows and ember glow. */
 
 /* ============================================================
-   FONT FACES (optional - Obsidian bundles these)
-   ============================================================ */
-
-/* ============================================================
-   CSS VARIABLES
+   CSS VARIABLES — exact Clawdia design system palette
    ============================================================ */
 .theme-light,
 .theme-dark {
-  /* --- Clawdia Palette --- */
-  --clawdia-cream-100: #fdf8f0;
-  --clawdia-cream-200: #f5ead6;
-  --clawdia-cream-300: #ede0c4;
-  --clawdia-cream-400: #d4c5a3;
-  --clawdia-cream-500: #b5a07c;
+  /* Cream scale */
+  --clawdia-cream-50:  #faf6ef;
+  --clawdia-cream-100: #f3ecdd;
+  --clawdia-cream-200: #e8dec6;
+  --clawdia-cream-300: #d6c79e;
 
-  --clawdia-ember-100: #ffe8cc;
-  --clawdia-ember-200: #ffcb8a;
-  --clawdia-ember-300: #f5a43a;
-  --clawdia-ember-400: #d4821a;
-  --clawdia-ember-500: #a05e0e;
+  /* Ink scale */
+  --clawdia-ink-950: #14110d;
+  --clawdia-ink-900: #1c1814;
+  --clawdia-ink-850: #221d18;
+  --clawdia-ink-800: #2a241e;
+  --clawdia-ink-700: #3a322a;
+  --clawdia-ink-600: #4f463c;
+  --clawdia-ink-500: #6f6457;
+  --clawdia-ink-400: #8f8475;
+  --clawdia-ink-300: #b5ab9a;
+  --clawdia-ink-200: #d4cbb9;
+  --clawdia-ink-100: #ece4d2;
 
-  --clawdia-rust-100: #f5ddd0;
-  --clawdia-rust-200: #e8b89a;
-  --clawdia-rust-300: #cc7a52;
-  --clawdia-rust-400: #a05030;
-  --clawdia-rust-500: #6e3520;
+  /* Claw (amber-orange accent) */
+  --clawdia-claw-600: #c25f2e;
+  --clawdia-claw-500: #d97742;
+  --clawdia-claw-400: #e89163;
+  --clawdia-claw-300: #f0ad88;
+  --clawdia-claw-100: #f7d8c4;
 
-  --clawdia-plum-100: #e8d8e8;
-  --clawdia-plum-200: #c8a8c8;
-  --clawdia-plum-300: #9a6a9a;
-  --clawdia-plum-400: #6e4870;
-  --clawdia-plum-500: #3e2240;
+  /* Moss / Plum */
+  --clawdia-moss-500: #6a7a44;
+  --clawdia-moss-400: #8a9863;
+  --clawdia-plum-500: #7e5570;
 
-  --clawdia-shadow-100: #2c2418;
-  --clawdia-shadow-200: #1e1810;
-  --clawdia-shadow-300: #140e08;
-
-  --clawdia-moss-300: #7a8c62;
-  --clawdia-moss-400: #556640;
-  --clawdia-gold: #c8943a;
-  --clawdia-moonstone: #b8ccd8;
+  /* Semantic */
+  --clawdia-good: #5d8a5a;
+  --clawdia-bad:  #b94c3c;
 }
 
 /* ============================================================
-   LIGHT THEME
-   ============================================================ */
-.theme-light {
-  --background-primary: var(--clawdia-cream-100);
-  --background-primary-alt: var(--clawdia-cream-200);
-  --background-secondary: var(--clawdia-cream-200);
-  --background-secondary-alt: var(--clawdia-cream-300);
-  --background-modifier-border: var(--clawdia-cream-400);
-  --background-modifier-border-hover: var(--clawdia-cream-500);
-  --background-modifier-border-focus: var(--clawdia-ember-300);
-  --background-modifier-form-field: var(--clawdia-cream-100);
-  --background-modifier-box-shadow: rgba(80, 50, 20, 0.12);
-  --background-modifier-success: #d4e8c4;
-  --background-modifier-error: #f5d4c8;
-  --background-modifier-error-rgb: 245, 212, 200;
-  --background-modifier-cover: rgba(60, 40, 20, 0.4);
-
-  --text-normal: #2c2010;
-  --text-muted: #7a6848;
-  --text-faint: #a09070;
-  --text-on-accent: #fdf8f0;
-  --text-error: #8c3820;
-  --text-warning: #7a5010;
-  --text-success: #3a6020;
-  --text-selection: rgba(212, 130, 26, 0.25);
-  --text-accent: var(--clawdia-ember-400);
-  --text-accent-hover: var(--clawdia-ember-500);
-
-  --interactive-normal: var(--clawdia-cream-200);
-  --interactive-hover: var(--clawdia-cream-300);
-  --interactive-accent: var(--clawdia-ember-400);
-  --interactive-accent-rgb: 212, 130, 26;
-  --interactive-accent-hover: var(--clawdia-ember-500);
-  --interactive-success: #4a7a2a;
-
-  --scrollbar-bg: transparent;
-  --scrollbar-thumb-bg: var(--clawdia-cream-400);
-  --scrollbar-active-thumb-bg: var(--clawdia-cream-500);
-
-  --highlight-mix-blend-mode: multiply;
-}
-
-/* ============================================================
-   DARK THEME  (default — Clawdia's natural habitat)
+   DARK THEME  (Clawdia's natural habitat — ink palette)
    ============================================================ */
 .theme-dark {
-  --background-primary: #1a140c;
-  --background-primary-alt: #221a10;
-  --background-secondary: #1e1710;
-  --background-secondary-alt: #281e14;
-  --background-modifier-border: #3a2e1e;
-  --background-modifier-border-hover: #4a3c28;
-  --background-modifier-border-focus: var(--clawdia-ember-400);
-  --background-modifier-form-field: #1e1710;
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
-  --background-modifier-success: #1e3018;
-  --background-modifier-error: #3c1a10;
-  --background-modifier-error-rgb: 60, 26, 16;
-  --background-modifier-cover: rgba(10, 6, 2, 0.65);
+  --background-primary:         var(--clawdia-ink-950);
+  --background-primary-alt:     var(--clawdia-ink-900);
+  --background-secondary:       var(--clawdia-ink-900);
+  --background-secondary-alt:   var(--clawdia-ink-850);
+  --background-modifier-border:       var(--clawdia-ink-700);
+  --background-modifier-border-hover: var(--clawdia-ink-600);
+  --background-modifier-border-focus: var(--clawdia-claw-500);
+  --background-modifier-form-field:   var(--clawdia-ink-900);
+  --background-modifier-box-shadow:   rgba(0, 0, 0, 0.55);
+  --background-modifier-success: rgba(93, 138, 90, 0.2);
+  --background-modifier-error:   rgba(185, 76, 60, 0.2);
+  --background-modifier-error-rgb: 185, 76, 60;
+  --background-modifier-cover:   rgba(10, 8, 6, 0.7);
 
-  --text-normal: #e8d8bc;
-  --text-muted: #9a8868;
-  --text-faint: #6a5a44;
-  --text-on-accent: #1a140c;
-  --text-error: #e89878;
-  --text-warning: #d4a860;
-  --text-success: #98c870;
-  --text-selection: rgba(212, 130, 26, 0.3);
-  --text-accent: var(--clawdia-ember-200);
-  --text-accent-hover: var(--clawdia-ember-100);
+  --text-normal:    var(--clawdia-cream-100);
+  --text-muted:     var(--clawdia-ink-300);
+  --text-faint:     var(--clawdia-ink-500);
+  --text-on-accent: var(--clawdia-ink-950);
+  --text-error:     #d68a7e;
+  --text-warning:   #e0b85a;
+  --text-success:   #91c08e;
+  --text-selection: rgba(217, 119, 66, 0.28);
+  --text-accent:       var(--clawdia-claw-400);
+  --text-accent-hover: var(--clawdia-claw-300);
 
-  --interactive-normal: #281e14;
-  --interactive-hover: #342818;
-  --interactive-accent: var(--clawdia-ember-300);
-  --interactive-accent-rgb: 245, 164, 58;
-  --interactive-accent-hover: var(--clawdia-ember-200);
-  --interactive-success: #70a848;
+  --interactive-normal:      var(--clawdia-ink-850);
+  --interactive-hover:       var(--clawdia-ink-800);
+  --interactive-accent:      var(--clawdia-claw-500);
+  --interactive-accent-rgb:  217, 119, 66;
+  --interactive-accent-hover: var(--clawdia-claw-400);
+  --interactive-success:     var(--clawdia-good);
 
-  --scrollbar-bg: transparent;
-  --scrollbar-thumb-bg: #3a2e1e;
-  --scrollbar-active-thumb-bg: #4a3c28;
+  --scrollbar-bg:               transparent;
+  --scrollbar-thumb-bg:         var(--clawdia-ink-700);
+  --scrollbar-active-thumb-bg:  var(--clawdia-ink-600);
 
   --highlight-mix-blend-mode: lighten;
+}
+
+/* ============================================================
+   LIGHT THEME  (cream/ink palette)
+   ============================================================ */
+.theme-light {
+  --background-primary:         var(--clawdia-cream-50);
+  --background-primary-alt:     var(--clawdia-cream-100);
+  --background-secondary:       var(--clawdia-cream-100);
+  --background-secondary-alt:   var(--clawdia-cream-200);
+  --background-modifier-border:       var(--clawdia-cream-200);
+  --background-modifier-border-hover: var(--clawdia-cream-300);
+  --background-modifier-border-focus: var(--clawdia-claw-500);
+  --background-modifier-form-field:   var(--clawdia-cream-50);
+  --background-modifier-box-shadow:   rgba(20, 17, 13, 0.1);
+  --background-modifier-success: rgba(93, 138, 90, 0.12);
+  --background-modifier-error:   rgba(185, 76, 60, 0.1);
+  --background-modifier-error-rgb: 185, 76, 60;
+  --background-modifier-cover:   rgba(20, 17, 13, 0.4);
+
+  --text-normal:    var(--clawdia-ink-950);
+  --text-muted:     var(--clawdia-ink-600);
+  --text-faint:     var(--clawdia-ink-400);
+  --text-on-accent: #ffffff;
+  --text-error:     var(--clawdia-bad);
+  --text-warning:   #a06c10;
+  --text-success:   var(--clawdia-good);
+  --text-selection: rgba(217, 119, 66, 0.2);
+  --text-accent:       var(--clawdia-claw-500);
+  --text-accent-hover: var(--clawdia-claw-600);
+
+  --interactive-normal:      var(--clawdia-cream-100);
+  --interactive-hover:       var(--clawdia-cream-200);
+  --interactive-accent:      var(--clawdia-claw-500);
+  --interactive-accent-rgb:  217, 119, 66;
+  --interactive-accent-hover: var(--clawdia-claw-600);
+  --interactive-success:     var(--clawdia-good);
+
+  --scrollbar-bg:               transparent;
+  --scrollbar-thumb-bg:         var(--clawdia-cream-200);
+  --scrollbar-active-thumb-bg:  var(--clawdia-cream-300);
+
+  --highlight-mix-blend-mode: multiply;
 }
 
 /* ============================================================
    TYPOGRAPHY
    ============================================================ */
 body {
-  --font-text-theme: "Georgia", "Palatino", serif;
-  --font-interface-theme: "Inter", "Segoe UI", system-ui, sans-serif;
-  --font-monospace-theme: "Fira Code", "Cascadia Code", "Consolas", monospace;
+  --font-text-theme:      "Georgia", "Palatino", serif;
+  --font-interface-theme: "Inter Tight", "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
 
-  --font-text-size: 16px;
-  --font-ui-small: 13px;
-  --font-ui-smaller: 11px;
-  --font-ui-medium: 15px;
-  --font-ui-large: 18px;
+  --font-text-size:   16px;
+  --font-ui-small:    13px;
+  --font-ui-smaller:  11px;
+  --font-ui-medium:   15px;
+  --font-ui-large:    18px;
 
   --line-height-normal: 1.75;
-  --line-height-tight: 1.4;
+  --line-height-tight:  1.4;
 }
 
 /* ============================================================
    HEADINGS
    ============================================================ */
 .theme-dark {
-  --h1-color: var(--clawdia-ember-200);
-  --h2-color: var(--clawdia-ember-100);
-  --h3-color: var(--clawdia-cream-200);
-  --h4-color: var(--clawdia-cream-300);
-  --h5-color: var(--clawdia-cream-400);
-  --h6-color: var(--clawdia-cream-500);
+  --h1-color: var(--clawdia-claw-300);
+  --h2-color: var(--clawdia-claw-400);
+  --h3-color: var(--clawdia-cream-100);
+  --h4-color: var(--clawdia-cream-200);
+  --h5-color: var(--clawdia-ink-300);
+  --h6-color: var(--clawdia-ink-400);
 
   --h1-font: var(--font-text-theme);
   --h1-size: 1.8em;
@@ -184,21 +181,23 @@ body {
 }
 
 .theme-light {
-  --h1-color: var(--clawdia-ember-500);
-  --h2-color: var(--clawdia-ember-400);
-  --h3-color: var(--clawdia-rust-400);
-  --h4-color: var(--clawdia-shadow-100);
-  --h5-color: var(--clawdia-cream-500);
-  --h6-color: var(--clawdia-cream-500);
+  --h1-color: var(--clawdia-claw-600);
+  --h2-color: var(--clawdia-claw-500);
+  --h3-color: var(--clawdia-ink-700);
+  --h4-color: var(--clawdia-ink-800);
+  --h5-color: var(--clawdia-ink-600);
+  --h6-color: var(--clawdia-ink-500);
 
   --h1-font: var(--font-text-theme);
   --h1-size: 1.8em;
   --h1-weight: 700;
   --h1-style: normal;
+
   --h2-font: var(--font-text-theme);
   --h2-size: 1.45em;
   --h2-weight: 600;
   --h2-style: italic;
+
   --h3-font: var(--font-interface-theme);
   --h3-size: 1.2em;
   --h3-weight: 600;
@@ -209,108 +208,108 @@ body {
    INLINE ELEMENTS
    ============================================================ */
 .theme-dark {
-  --bold-color: var(--clawdia-ember-200);
-  --italic-color: var(--clawdia-cream-300);
-  --bold-weight: 700;
+  --bold-color:   var(--clawdia-claw-300);
+  --italic-color: var(--clawdia-cream-200);
+  --bold-weight:  700;
 }
 
 .theme-light {
-  --bold-color: var(--clawdia-ember-400);
-  --italic-color: var(--clawdia-rust-400);
-  --bold-weight: 700;
+  --bold-color:   var(--clawdia-claw-600);
+  --italic-color: var(--clawdia-ink-700);
+  --bold-weight:  700;
 }
 
 /* ============================================================
    LINKS
    ============================================================ */
 .theme-dark {
-  --link-color: var(--clawdia-ember-200);
-  --link-color-hover: var(--clawdia-ember-100);
-  --link-unresolved-color: var(--clawdia-plum-300);
-  --link-unresolved-opacity: 0.8;
+  --link-color:                    var(--clawdia-claw-400);
+  --link-color-hover:              var(--clawdia-claw-300);
+  --link-unresolved-color:         var(--clawdia-plum-500);
+  --link-unresolved-opacity:       0.85;
   --link-unresolved-decoration-style: dashed;
-  --link-external-color: var(--clawdia-moonstone);
-  --link-external-color-hover: #d4e8f0;
+  --link-external-color:           var(--clawdia-moss-400);
+  --link-external-color-hover:     var(--clawdia-moss-500);
 }
 
 .theme-light {
-  --link-color: var(--clawdia-ember-400);
-  --link-color-hover: var(--clawdia-ember-500);
-  --link-unresolved-color: var(--clawdia-plum-400);
-  --link-external-color: #3a6a8a;
+  --link-color:            var(--clawdia-claw-500);
+  --link-color-hover:      var(--clawdia-claw-600);
+  --link-unresolved-color: var(--clawdia-plum-500);
+  --link-external-color:   var(--clawdia-moss-500);
 }
 
 /* ============================================================
    TAGS
    ============================================================ */
 .theme-dark {
-  --tag-color: var(--clawdia-ember-200);
-  --tag-background: rgba(245, 164, 58, 0.12);
-  --tag-background-hover: rgba(245, 164, 58, 0.22);
-  --tag-border-color: rgba(245, 164, 58, 0.3);
-  --tag-border-width: 1px;
-  --tag-padding-x: 8px;
-  --tag-padding-y: 2px;
-  --tag-radius: 4px;
+  --tag-color:             var(--clawdia-claw-300);
+  --tag-background:        rgba(217, 119, 66, 0.12);
+  --tag-background-hover:  rgba(217, 119, 66, 0.22);
+  --tag-border-color:      rgba(217, 119, 66, 0.28);
+  --tag-border-width:      1px;
+  --tag-padding-x:         8px;
+  --tag-padding-y:         2px;
+  --tag-radius:            4px;
 }
 
 .theme-light {
-  --tag-color: var(--clawdia-ember-500);
-  --tag-background: rgba(160, 80, 14, 0.08);
-  --tag-background-hover: rgba(160, 80, 14, 0.16);
-  --tag-border-color: rgba(160, 80, 14, 0.25);
-  --tag-border-width: 1px;
-  --tag-padding-x: 8px;
-  --tag-padding-y: 2px;
-  --tag-radius: 4px;
+  --tag-color:             var(--clawdia-claw-600);
+  --tag-background:        rgba(194, 95, 46, 0.08);
+  --tag-background-hover:  rgba(194, 95, 46, 0.16);
+  --tag-border-color:      rgba(194, 95, 46, 0.25);
+  --tag-border-width:      1px;
+  --tag-padding-x:         8px;
+  --tag-padding-y:         2px;
+  --tag-radius:            4px;
 }
 
 /* ============================================================
    CODE BLOCKS
    ============================================================ */
 .theme-dark {
-  --code-background: #100c06;
-  --code-normal: #d4c8a0;
-  --code-comment: #6a5a44;
-  --code-function: var(--clawdia-ember-200);
-  --code-important: var(--clawdia-rust-200);
-  --code-keyword: var(--clawdia-plum-200);
-  --code-operator: var(--clawdia-cream-400);
-  --code-property: var(--clawdia-moonstone);
-  --code-punctuation: #7a6848;
-  --code-string: var(--clawdia-moss-300);
-  --code-tag: var(--clawdia-rust-300);
-  --code-value: var(--clawdia-ember-300);
+  --code-background:  #100e0a;
+  --code-normal:      var(--clawdia-ink-200);
+  --code-comment:     var(--clawdia-ink-500);
+  --code-function:    var(--clawdia-claw-300);
+  --code-important:   var(--clawdia-claw-400);
+  --code-keyword:     #c3aedd;
+  --code-operator:    var(--clawdia-cream-300);
+  --code-property:    var(--clawdia-moss-400);
+  --code-punctuation: var(--clawdia-ink-400);
+  --code-string:      var(--clawdia-moss-400);
+  --code-tag:         var(--clawdia-claw-400);
+  --code-value:       var(--clawdia-claw-300);
 }
 
 .theme-light {
-  --code-background: var(--clawdia-cream-300);
-  --code-normal: #2c2010;
-  --code-comment: var(--clawdia-cream-500);
-  --code-function: var(--clawdia-ember-500);
-  --code-keyword: var(--clawdia-plum-400);
-  --code-string: var(--clawdia-moss-400);
-  --code-value: var(--clawdia-rust-400);
+  --code-background:  var(--clawdia-cream-200);
+  --code-normal:      var(--clawdia-ink-900);
+  --code-comment:     var(--clawdia-ink-400);
+  --code-function:    var(--clawdia-claw-600);
+  --code-keyword:     var(--clawdia-plum-500);
+  --code-string:      var(--clawdia-moss-500);
+  --code-value:       var(--clawdia-claw-500);
 }
 
 /* ============================================================
    BLOCKQUOTES
    ============================================================ */
 .theme-dark blockquote {
-  border-left: 3px solid var(--clawdia-ember-400) !important;
-  background: rgba(212, 130, 26, 0.06);
+  border-left: 3px solid var(--clawdia-claw-500) !important;
+  background: rgba(217, 119, 66, 0.06);
   padding: 0.75em 1.25em;
-  border-radius: 0 4px 4px 0;
-  color: var(--clawdia-cream-300);
+  border-radius: 0 6px 6px 0;
+  color: var(--clawdia-ink-200);
   font-style: italic;
 }
 
 .theme-light blockquote {
-  border-left: 3px solid var(--clawdia-ember-300) !important;
-  background: rgba(212, 130, 26, 0.07);
+  border-left: 3px solid var(--clawdia-claw-400) !important;
+  background: rgba(217, 119, 66, 0.07);
   padding: 0.75em 1.25em;
-  border-radius: 0 4px 4px 0;
-  color: var(--clawdia-rust-400);
+  border-radius: 0 6px 6px 0;
+  color: var(--clawdia-ink-700);
   font-style: italic;
 }
 
@@ -319,41 +318,56 @@ body {
    ============================================================ */
 .theme-dark hr {
   border: none;
-  border-top: 1px solid #3a2e1e;
+  border-top: 1px solid var(--clawdia-ink-700);
   margin: 2em 0;
-  position: relative;
+}
+
+.theme-light hr {
+  border: none;
+  border-top: 1px solid var(--clawdia-cream-200);
+  margin: 2em 0;
 }
 
 /* ============================================================
    TABLES
    ============================================================ */
 .theme-dark {
-  --table-border-color: #3a2e1e;
-  --table-border-width: 1px;
-  --table-header-background: #221a10;
-  --table-header-background-hover: #2a2014;
-  --table-row-background-hover: rgba(245, 164, 58, 0.05);
-  --table-column-max-width: 400px;
-  --table-column-min-width: 100px;
-  --table-column-first-border: none;
-  --table-column-last-border: none;
-  --table-row-last-border: none;
-  --table-header-border: 2px solid var(--clawdia-ember-400);
-  --table-header-color: var(--clawdia-ember-200);
+  --table-border-color:              var(--clawdia-ink-700);
+  --table-border-width:              1px;
+  --table-header-background:         var(--clawdia-ink-900);
+  --table-header-background-hover:   var(--clawdia-ink-850);
+  --table-row-background-hover:      rgba(217, 119, 66, 0.05);
+  --table-column-max-width:          400px;
+  --table-column-min-width:          100px;
+  --table-column-first-border:       none;
+  --table-column-last-border:        none;
+  --table-row-last-border:           none;
+  --table-header-border:             2px solid var(--clawdia-claw-500);
+  --table-header-color:              var(--clawdia-claw-300);
+}
+
+.theme-light {
+  --table-border-color:            var(--clawdia-cream-200);
+  --table-border-width:            1px;
+  --table-header-background:       var(--clawdia-cream-100);
+  --table-header-background-hover: var(--clawdia-cream-200);
+  --table-row-background-hover:    rgba(217, 119, 66, 0.05);
+  --table-header-border:           2px solid var(--clawdia-claw-400);
+  --table-header-color:            var(--clawdia-claw-600);
 }
 
 /* ============================================================
    CALLOUTS
    ============================================================ */
 .theme-dark {
-  --callout-default: var(--clawdia-cream-500);
-  --callout-info: var(--clawdia-moonstone);
-  --callout-warning: var(--clawdia-ember-300);
-  --callout-danger: var(--clawdia-rust-300);
-  --callout-success: var(--clawdia-moss-300);
-  --callout-tip: var(--clawdia-gold);
-  --callout-question: var(--clawdia-plum-300);
-  --callout-quote: var(--clawdia-cream-400);
+  --callout-default: var(--clawdia-ink-300);
+  --callout-info:    var(--clawdia-moss-400);
+  --callout-warning: var(--clawdia-claw-400);
+  --callout-danger:  var(--clawdia-bad);
+  --callout-success: var(--clawdia-good);
+  --callout-tip:     var(--clawdia-claw-300);
+  --callout-question: #c3aedd;
+  --callout-quote:   var(--clawdia-ink-300);
 }
 
 /* ============================================================
@@ -361,49 +375,84 @@ body {
    ============================================================ */
 .theme-dark .nav-folder-title,
 .theme-dark .nav-file-title {
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 2px 8px;
-  color: var(--clawdia-cream-300);
+  color: var(--clawdia-ink-200);
 }
 
 .theme-dark .nav-file-title:hover,
 .theme-dark .nav-folder-title:hover {
-  background: rgba(245, 164, 58, 0.08);
-  color: var(--clawdia-ember-200);
+  background: rgba(217, 119, 66, 0.08);
+  color: var(--clawdia-claw-300);
 }
 
 .theme-dark .nav-file-title.is-active,
 .theme-dark .nav-folder-title.is-active {
-  background: rgba(245, 164, 58, 0.15);
-  color: var(--clawdia-ember-200);
+  background: rgba(217, 119, 66, 0.15);
+  color: var(--clawdia-claw-300);
   font-weight: 600;
 }
 
 .theme-dark .nav-folder-title-content {
   font-weight: 500;
-  color: var(--clawdia-ember-300);
+  color: var(--clawdia-claw-400);
+}
+
+.theme-light .nav-folder-title,
+.theme-light .nav-file-title {
+  border-radius: 6px;
+  padding: 2px 8px;
+  color: var(--clawdia-ink-700);
+}
+
+.theme-light .nav-file-title:hover,
+.theme-light .nav-folder-title:hover {
+  background: rgba(217, 119, 66, 0.08);
+  color: var(--clawdia-ink-950);
+}
+
+.theme-light .nav-file-title.is-active,
+.theme-light .nav-folder-title.is-active {
+  background: var(--clawdia-claw-100);
+  color: var(--clawdia-claw-600);
+  font-weight: 600;
 }
 
 /* ============================================================
    TABS
    ============================================================ */
 .theme-dark {
-  --tab-text-color: var(--clawdia-cream-400);
-  --tab-text-color-focused: var(--clawdia-cream-200);
-  --tab-text-color-focused-active: var(--clawdia-ember-200);
-  --tab-text-color-active: var(--clawdia-cream-200);
-  --tab-background-active: var(--background-primary);
-  --tab-outline-color: var(--clawdia-ember-400);
-  --tab-divider-color: #3a2e1e;
-  --tab-radius: 6px 6px 0 0;
-  --tab-radius-active: 6px 6px 0 0;
+  --tab-text-color:               var(--clawdia-ink-300);
+  --tab-text-color-focused:       var(--clawdia-ink-100);
+  --tab-text-color-focused-active: var(--clawdia-claw-300);
+  --tab-text-color-active:        var(--clawdia-cream-100);
+  --tab-background-active:        var(--background-primary);
+  --tab-outline-color:            var(--clawdia-claw-500);
+  --tab-divider-color:            var(--clawdia-ink-700);
+  --tab-radius:                   6px 6px 0 0;
+  --tab-radius-active:            6px 6px 0 0;
+}
+
+.theme-light {
+  --tab-text-color:               var(--clawdia-ink-500);
+  --tab-text-color-focused:       var(--clawdia-ink-700);
+  --tab-text-color-focused-active: var(--clawdia-claw-600);
+  --tab-text-color-active:        var(--clawdia-ink-900);
+  --tab-background-active:        var(--background-primary);
+  --tab-outline-color:            var(--clawdia-claw-500);
+  --tab-divider-color:            var(--clawdia-cream-200);
 }
 
 /* ============================================================
    TITLE BAR
    ============================================================ */
 .theme-dark .titlebar-text {
-  color: var(--clawdia-cream-300);
+  color: var(--clawdia-ink-300);
+  font-style: italic;
+}
+
+.theme-light .titlebar-text {
+  color: var(--clawdia-ink-600);
   font-style: italic;
 }
 
@@ -411,23 +460,36 @@ body {
    STATUS BAR
    ============================================================ */
 .theme-dark .status-bar {
-  background: #100c06;
-  border-top: 1px solid #3a2e1e;
-  color: var(--clawdia-cream-500);
+  background: var(--clawdia-ink-950);
+  border-top: 1px solid var(--clawdia-ink-800);
+  color: var(--clawdia-ink-400);
+}
+
+.theme-light .status-bar {
+  background: var(--clawdia-cream-100);
+  border-top: 1px solid var(--clawdia-cream-200);
+  color: var(--clawdia-ink-500);
 }
 
 /* ============================================================
    SEARCH
    ============================================================ */
 .theme-dark {
-  --search-clear-button-color: var(--clawdia-cream-400);
-  --search-icon-color: var(--clawdia-cream-400);
-  --search-result-background: var(--background-primary-alt);
+  --search-clear-button-color: var(--clawdia-ink-400);
+  --search-icon-color:         var(--clawdia-ink-400);
+  --search-result-background:  var(--background-primary-alt);
 }
 
 .theme-dark .search-result-file-matched-text {
-  color: var(--clawdia-ember-200);
-  background: rgba(245, 164, 58, 0.18);
+  color: var(--clawdia-claw-300);
+  background: rgba(217, 119, 66, 0.18);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.theme-light .search-result-file-matched-text {
+  color: var(--clawdia-claw-600);
+  background: var(--clawdia-claw-100);
   border-radius: 3px;
   padding: 0 2px;
 }
@@ -436,63 +498,69 @@ body {
    GRAPH VIEW
    ============================================================ */
 .theme-dark {
-  --graph-line: #3a2e1e;
-  --graph-node: var(--clawdia-cream-500);
-  --graph-node-unresolved: var(--clawdia-plum-400);
-  --graph-node-focused: var(--clawdia-ember-300);
-  --graph-node-tag: var(--clawdia-gold);
-  --graph-node-attachment: var(--clawdia-moonstone);
-  --graph-text: var(--clawdia-cream-300);
+  --graph-line:             var(--clawdia-ink-700);
+  --graph-node:             var(--clawdia-ink-400);
+  --graph-node-unresolved:  var(--clawdia-plum-500);
+  --graph-node-focused:     var(--clawdia-claw-400);
+  --graph-node-tag:         var(--clawdia-claw-300);
+  --graph-node-attachment:  var(--clawdia-moss-400);
+  --graph-text:             var(--clawdia-ink-300);
 }
 
 /* ============================================================
    CHECKBOXES / TASKS
    ============================================================ */
 .theme-dark input[type=checkbox] {
-  border: 1.5px solid var(--clawdia-cream-500);
+  border: 1.5px solid var(--clawdia-ink-500);
 }
 
 .theme-dark input[type=checkbox]:checked {
-  background-color: var(--clawdia-ember-400);
-  border-color: var(--clawdia-ember-400);
+  background-color: var(--clawdia-claw-500);
+  border-color:     var(--clawdia-claw-500);
 }
 
 .theme-dark .task-list-item-checkbox {
-  border: 1.5px solid var(--clawdia-cream-500);
+  border: 1.5px solid var(--clawdia-ink-500);
 }
 
 .theme-dark .task-list-item.is-checked > .task-list-item-checkbox {
-  background-color: var(--clawdia-ember-400);
-  border-color: var(--clawdia-ember-400);
+  background-color: var(--clawdia-claw-500);
+  border-color:     var(--clawdia-claw-500);
 }
 
 .theme-dark .task-list-item.is-checked > p,
 .theme-dark .task-list-item.is-checked {
-  color: var(--clawdia-cream-500);
+  color: var(--clawdia-ink-400);
   text-decoration: line-through;
-  text-decoration-color: var(--clawdia-ember-400);
+  text-decoration-color: var(--clawdia-claw-500);
+}
+
+.theme-light input[type=checkbox]:checked,
+.theme-light .task-list-item.is-checked > .task-list-item-checkbox {
+  background-color: var(--clawdia-claw-500);
+  border-color:     var(--clawdia-claw-500);
 }
 
 /* ============================================================
    HIGHLIGHTS
    ============================================================ */
 .theme-dark mark {
-  background: rgba(212, 130, 26, 0.3);
-  color: var(--clawdia-ember-100);
+  background: rgba(217, 119, 66, 0.28);
+  color: var(--clawdia-claw-100);
   border-radius: 2px;
   padding: 0 2px;
 }
 
 .theme-light mark {
-  background: rgba(245, 164, 58, 0.25);
-  color: var(--clawdia-ember-500);
+  background: var(--clawdia-claw-100);
+  color: var(--clawdia-claw-600);
 }
 
 /* ============================================================
-   STACKED EDITOR / INLINE TITLE
+   INLINE TITLE
    ============================================================ */
 .theme-dark .inline-title {
-  color: var(--clawdia-ember-200);
+  color: var(--clawdia-claw-300);
   font-family: var(--font-text-theme);
   font-weight: 700;
   font-size: 2em;
@@ -500,7 +568,7 @@ body {
 }
 
 .theme-light .inline-title {
-  color: var(--clawdia-ember-500);
+  color: var(--clawdia-claw-600);
   font-family: var(--font-text-theme);
   font-weight: 700;
   font-size: 2em;
@@ -510,48 +578,74 @@ body {
    MODALS
    ============================================================ */
 .theme-dark .modal {
-  background: var(--background-primary);
-  border: 1px solid #3a2e1e;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(245, 164, 58, 0.08);
+  background: var(--clawdia-ink-900);
+  border: 1px solid var(--clawdia-ink-700);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(217, 119, 66, 0.08);
 }
 
 .theme-dark .modal-title {
-  color: var(--clawdia-ember-200);
+  color: var(--clawdia-claw-300);
   font-family: var(--font-text-theme);
   font-style: italic;
   font-size: 1.2em;
+}
+
+.theme-light .modal {
+  background: var(--clawdia-cream-50);
+  border: 1px solid var(--clawdia-cream-200);
+  box-shadow: 0 16px 48px rgba(20, 17, 13, 0.18);
 }
 
 /* ============================================================
    PROMPT / COMMAND PALETTE
    ============================================================ */
 .theme-dark .prompt {
-  background: #100c06;
-  border: 1px solid #4a3c28;
+  background: var(--clawdia-ink-950);
+  border: 1px solid var(--clawdia-ink-700);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
 }
 
 .theme-dark .prompt-input {
-  color: var(--clawdia-cream-200);
+  color: var(--clawdia-cream-100);
   background: transparent;
-  border-bottom: 1px solid #3a2e1e;
+  border-bottom: 1px solid var(--clawdia-ink-700);
 }
 
 .theme-dark .suggestion-item.is-selected {
-  background: rgba(245, 164, 58, 0.12);
-  color: var(--clawdia-ember-200);
-  border-radius: 4px;
+  background: rgba(217, 119, 66, 0.12);
+  color: var(--clawdia-claw-300);
+  border-radius: 6px;
+}
+
+.theme-light .prompt {
+  background: var(--clawdia-cream-50);
+  border: 1px solid var(--clawdia-cream-200);
+  box-shadow: 0 16px 48px rgba(20, 17, 13, 0.16);
+}
+
+.theme-light .suggestion-item.is-selected {
+  background: var(--clawdia-claw-100);
+  color: var(--clawdia-claw-600);
+  border-radius: 6px;
 }
 
 /* ============================================================
    CANVAS
    ============================================================ */
 .theme-dark {
-  --canvas-background: #140e08;
-  --canvas-dot-color: #2c2418;
-  --canvas-card-background: var(--background-primary);
-  --canvas-card-border: #3a2e1e;
-  --canvas-card-border-hover: var(--clawdia-ember-400);
+  --canvas-background:        var(--clawdia-ink-950);
+  --canvas-dot-color:         var(--clawdia-ink-800);
+  --canvas-card-background:   var(--clawdia-ink-900);
+  --canvas-card-border:       var(--clawdia-ink-700);
+  --canvas-card-border-hover: var(--clawdia-claw-500);
+}
+
+.theme-light {
+  --canvas-background:        var(--clawdia-cream-50);
+  --canvas-dot-color:         var(--clawdia-cream-200);
+  --canvas-card-background:   #ffffff;
+  --canvas-card-border:       var(--clawdia-cream-200);
+  --canvas-card-border-hover: var(--clawdia-claw-400);
 }
 
 /* ============================================================
@@ -567,45 +661,76 @@ body {
 }
 
 .theme-dark ::-webkit-scrollbar-thumb {
-  background: #3a2e1e;
+  background: var(--clawdia-ink-700);
   border-radius: 3px;
 }
 
 .theme-dark ::-webkit-scrollbar-thumb:hover {
-  background: #4a3c28;
+  background: var(--clawdia-ink-600);
 }
 
 .theme-light ::-webkit-scrollbar-thumb {
-  background: var(--clawdia-cream-400);
+  background: var(--clawdia-cream-200);
   border-radius: 3px;
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: var(--clawdia-cream-300);
 }
 
 /* ============================================================
    BUTTONS
    ============================================================ */
 .theme-dark button.mod-cta {
-  background: var(--clawdia-ember-400);
-  color: #1a140c;
+  background: var(--clawdia-claw-500);
+  color: #ffffff;
   font-weight: 600;
   border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 0 var(--clawdia-claw-600), 0 8px 20px -8px rgba(217, 119, 66, 0.5);
 }
 
 .theme-dark button.mod-cta:hover {
-  background: var(--clawdia-ember-300);
+  background: var(--clawdia-claw-400);
+}
+
+.theme-light button.mod-cta {
+  background: var(--clawdia-claw-500);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 0 var(--clawdia-claw-600), 0 8px 20px -8px rgba(217, 119, 66, 0.45);
+}
+
+.theme-light button.mod-cta:hover {
+  background: var(--clawdia-claw-400);
 }
 
 /* ============================================================
    PROPERTIES PANEL
    ============================================================ */
 .theme-dark .metadata-container {
-  background: rgba(34, 26, 16, 0.6);
-  border: 1px solid #3a2e1e;
-  border-radius: 6px;
+  background: rgba(34, 29, 24, 0.6);
+  border: 1px solid var(--clawdia-ink-700);
+  border-radius: 8px;
   padding: 0.5em;
 }
 
 .theme-dark .metadata-property-key {
-  color: var(--clawdia-ember-300);
+  color: var(--clawdia-claw-400);
+  font-weight: 500;
+}
+
+.theme-light .metadata-container {
+  background: rgba(243, 236, 221, 0.6);
+  border: 1px solid var(--clawdia-cream-200);
+  border-radius: 8px;
+  padding: 0.5em;
+}
+
+.theme-light .metadata-property-key {
+  color: var(--clawdia-claw-500);
   font-weight: 500;
 }
 
@@ -614,39 +739,56 @@ body {
    ============================================================ */
 .theme-dark .workspace-split.mod-horizontal > .workspace-split-resize-handle,
 .theme-dark .workspace-split.mod-vertical > .workspace-split-resize-handle {
-  background: #3a2e1e;
+  background: var(--clawdia-ink-800);
 }
 
 .theme-dark .workspace-split.mod-horizontal > .workspace-split-resize-handle:hover,
 .theme-dark .workspace-split.mod-vertical > .workspace-split-resize-handle:hover {
-  background: var(--clawdia-ember-400);
+  background: var(--clawdia-claw-500);
+}
+
+.theme-light .workspace-split.mod-horizontal > .workspace-split-resize-handle,
+.theme-light .workspace-split.mod-vertical > .workspace-split-resize-handle {
+  background: var(--clawdia-cream-200);
+}
+
+.theme-light .workspace-split.mod-horizontal > .workspace-split-resize-handle:hover,
+.theme-light .workspace-split.mod-vertical > .workspace-split-resize-handle:hover {
+  background: var(--clawdia-claw-400);
 }
 
 /* ============================================================
    FOLDING ARROWS
    ============================================================ */
 .theme-dark .collapse-icon svg path {
-  stroke: var(--clawdia-cream-500);
+  stroke: var(--clawdia-ink-400);
 }
 
 .theme-dark .collapse-icon:hover svg path {
-  stroke: var(--clawdia-ember-200);
+  stroke: var(--clawdia-claw-300);
+}
+
+.theme-light .collapse-icon svg path {
+  stroke: var(--clawdia-ink-400);
+}
+
+.theme-light .collapse-icon:hover svg path {
+  stroke: var(--clawdia-claw-500);
 }
 
 /* ============================================================
-   READING VIEW — pull quote ornaments
+   READING VIEW — heading ornaments
    ============================================================ */
 .theme-dark .markdown-rendered h1::before,
 .theme-dark .markdown-source-view.mod-cm6 .HyperMD-header-1::before {
   content: "✦ ";
-  color: var(--clawdia-ember-400);
-  font-size: 0.7em;
+  color: var(--clawdia-claw-500);
+  font-size: 0.65em;
   vertical-align: middle;
 }
 
 /* ============================================================
    SIGNATURE — subtle paw watermark on empty workspace
-   (CSS-only, no images required)
    ============================================================ */
 .theme-dark .workspace-leaf-content[data-type="empty"] .view-content::after {
   content: "𓃠";
@@ -654,7 +796,18 @@ body {
   bottom: 2rem;
   right: 2rem;
   font-size: 4rem;
-  color: rgba(245, 164, 58, 0.06);
+  color: rgba(217, 119, 66, 0.06);
+  pointer-events: none;
+  user-select: none;
+}
+
+.theme-light .workspace-leaf-content[data-type="empty"] .view-content::after {
+  content: "𓃠";
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: rgba(194, 95, 46, 0.08);
   pointer-events: none;
   user-select: none;
 }
