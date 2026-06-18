@@ -192,16 +192,23 @@ body {
   --h1-size: 1.8em;
   --h1-weight: 700;
   --h1-style: normal;
+  --h1-line-height: 1.2;
 
   --h2-font: var(--font-text-theme);
   --h2-size: 1.45em;
   --h2-weight: 600;
   --h2-style: italic;
+  --h2-line-height: 1.3;
 
   --h3-font: var(--font-interface-theme);
   --h3-size: 1.2em;
   --h3-weight: 600;
   --h3-style: normal;
+
+  --h4-font: var(--font-interface-theme);
+  --h4-size: 1.05em;
+  --h4-weight: 600;
+  --h4-style: normal;
 }
 
 /* ============================================================
@@ -236,7 +243,10 @@ body {
   --link-color:            var(--clawdia-claw-500);
   --link-color-hover:      var(--clawdia-claw-600);
   --link-unresolved-color: var(--clawdia-plum-500);
+  --link-unresolved-opacity: 0.85;
+  --link-unresolved-decoration-style: dashed;
   --link-external-color:   var(--clawdia-moss-500);
+  --link-external-color-hover: var(--clawdia-moss-400);
 }
 
 /* ============================================================
@@ -287,8 +297,13 @@ body {
   --code-normal:      var(--clawdia-ink-900);
   --code-comment:     var(--clawdia-ink-400);
   --code-function:    var(--clawdia-claw-600);
+  --code-important:   var(--clawdia-claw-500);
   --code-keyword:     var(--clawdia-plum-500);
+  --code-operator:    var(--clawdia-ink-600);
+  --code-property:    var(--clawdia-moss-500);
+  --code-punctuation: var(--clawdia-ink-500);
   --code-string:      var(--clawdia-moss-500);
+  --code-tag:         var(--clawdia-claw-600);
   --code-value:       var(--clawdia-claw-500);
 }
 
@@ -296,7 +311,7 @@ body {
    BLOCKQUOTES
    ============================================================ */
 .theme-dark blockquote {
-  border-left: 3px solid var(--clawdia-claw-500) !important;
+  border-left: 3px solid var(--clawdia-claw-500);
   background: rgba(217, 119, 66, 0.06);
   padding: 0.75em 1.25em;
   border-radius: 0 6px 6px 0;
@@ -305,7 +320,7 @@ body {
 }
 
 .theme-light blockquote {
-  border-left: 3px solid var(--clawdia-claw-400) !important;
+  border-left: 3px solid var(--clawdia-claw-400);
   background: rgba(217, 119, 66, 0.07);
   padding: 0.75em 1.25em;
   border-radius: 0 6px 6px 0;
@@ -352,6 +367,11 @@ body {
   --table-header-background:       var(--clawdia-cream-100);
   --table-header-background-hover: var(--clawdia-cream-200);
   --table-row-background-hover:    rgba(217, 119, 66, 0.05);
+  --table-column-max-width:        400px;
+  --table-column-min-width:        100px;
+  --table-column-first-border:     none;
+  --table-column-last-border:      none;
+  --table-row-last-border:         none;
   --table-header-border:           2px solid var(--clawdia-claw-400);
   --table-header-color:            var(--clawdia-claw-600);
 }
@@ -368,6 +388,17 @@ body {
   --callout-tip:     var(--clawdia-claw-300);
   --callout-question: #c3aedd;
   --callout-quote:   var(--clawdia-ink-300);
+}
+
+.theme-light {
+  --callout-default: var(--clawdia-ink-400);
+  --callout-info:    var(--clawdia-moss-500);
+  --callout-warning: var(--clawdia-claw-500);
+  --callout-danger:  var(--clawdia-bad);
+  --callout-success: var(--clawdia-good);
+  --callout-tip:     var(--clawdia-claw-400);
+  --callout-question: var(--clawdia-plum-500);
+  --callout-quote:   var(--clawdia-ink-400);
 }
 
 /* ============================================================
@@ -441,6 +472,8 @@ body {
   --tab-background-active:        var(--background-primary);
   --tab-outline-color:            var(--clawdia-claw-500);
   --tab-divider-color:            var(--clawdia-cream-200);
+  --tab-radius:                   6px 6px 0 0;
+  --tab-radius-active:            6px 6px 0 0;
 }
 
 /* ============================================================
@@ -487,6 +520,12 @@ body {
   padding: 0 2px;
 }
 
+.theme-light {
+  --search-clear-button-color: var(--clawdia-ink-400);
+  --search-icon-color:         var(--clawdia-ink-400);
+  --search-result-background:  var(--background-primary-alt);
+}
+
 .theme-light .search-result-file-matched-text {
   color: var(--clawdia-claw-600);
   background: var(--clawdia-claw-100);
@@ -505,6 +544,16 @@ body {
   --graph-node-tag:         var(--clawdia-claw-300);
   --graph-node-attachment:  var(--clawdia-moss-400);
   --graph-text:             var(--clawdia-ink-300);
+}
+
+.theme-light {
+  --graph-line:             var(--clawdia-cream-300);
+  --graph-node:             var(--clawdia-ink-400);
+  --graph-node-unresolved:  var(--clawdia-plum-500);
+  --graph-node-focused:     var(--clawdia-claw-500);
+  --graph-node-tag:         var(--clawdia-claw-400);
+  --graph-node-attachment:  var(--clawdia-moss-400);
+  --graph-text:             var(--clawdia-ink-500);
 }
 
 /* ============================================================
@@ -535,10 +584,21 @@ body {
   text-decoration-color: var(--clawdia-claw-500);
 }
 
+.theme-light input[type=checkbox] {
+  border: 1.5px solid var(--clawdia-ink-500);
+}
+
 .theme-light input[type=checkbox]:checked,
 .theme-light .task-list-item.is-checked > .task-list-item-checkbox {
   background-color: var(--clawdia-claw-500);
   border-color:     var(--clawdia-claw-500);
+}
+
+.theme-light .task-list-item.is-checked > p,
+.theme-light .task-list-item.is-checked {
+  color: var(--clawdia-ink-500);
+  text-decoration: line-through;
+  text-decoration-color: var(--clawdia-claw-500);
 }
 
 /* ============================================================
@@ -572,6 +632,7 @@ body {
   font-family: var(--font-text-theme);
   font-weight: 700;
   font-size: 2em;
+  letter-spacing: -0.01em;
 }
 
 /* ============================================================
@@ -594,6 +655,13 @@ body {
   background: var(--clawdia-cream-50);
   border: 1px solid var(--clawdia-cream-200);
   box-shadow: 0 16px 48px rgba(20, 17, 13, 0.18);
+}
+
+.theme-light .modal-title {
+  color: var(--clawdia-claw-600);
+  font-family: var(--font-text-theme);
+  font-style: italic;
+  font-size: 1.2em;
 }
 
 /* ============================================================
@@ -621,6 +689,12 @@ body {
   background: var(--clawdia-cream-50);
   border: 1px solid var(--clawdia-cream-200);
   box-shadow: 0 16px 48px rgba(20, 17, 13, 0.16);
+}
+
+.theme-light .prompt-input {
+  color: var(--clawdia-ink-950);
+  background: transparent;
+  border-bottom: 1px solid var(--clawdia-cream-200);
 }
 
 .theme-light .suggestion-item.is-selected {
@@ -651,6 +725,18 @@ body {
 /* ============================================================
    SCROLLBARS
    ============================================================ */
+body {
+  scrollbar-width: thin;
+}
+
+.theme-dark {
+  scrollbar-color: var(--clawdia-ink-700) transparent;
+}
+
+.theme-light {
+  scrollbar-color: var(--clawdia-cream-200) transparent;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -694,6 +780,11 @@ body {
   background: var(--clawdia-claw-400);
 }
 
+.theme-dark button.mod-cta:active {
+  box-shadow: 0 1px 0 var(--clawdia-claw-600), 0 2px 8px -4px rgba(217, 119, 66, 0.5);
+  transform: translateY(3px);
+}
+
 .theme-light button.mod-cta {
   background: var(--clawdia-claw-500);
   color: #ffffff;
@@ -705,6 +796,11 @@ body {
 
 .theme-light button.mod-cta:hover {
   background: var(--clawdia-claw-400);
+}
+
+.theme-light button.mod-cta:active {
+  box-shadow: 0 1px 0 var(--clawdia-claw-600), 0 2px 8px -4px rgba(217, 119, 66, 0.45);
+  transform: translateY(3px);
 }
 
 /* ============================================================
@@ -787,11 +883,19 @@ body {
   vertical-align: middle;
 }
 
+.theme-light .markdown-rendered h1::before,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-header-1::before {
+  content: "✦ ";
+  color: var(--clawdia-claw-600);
+  font-size: 0.65em;
+  vertical-align: middle;
+}
+
 /* ============================================================
    SIGNATURE — subtle paw watermark on empty workspace
    ============================================================ */
 .theme-dark .workspace-leaf-content[data-type="empty"] .view-content::after {
-  content: "𓃠";
+  content: "🐈";
   position: absolute;
   bottom: 2rem;
   right: 2rem;
@@ -802,7 +906,7 @@ body {
 }
 
 .theme-light .workspace-leaf-content[data-type="empty"] .view-content::after {
-  content: "𓃠";
+  content: "🐈";
   position: absolute;
   bottom: 2rem;
   right: 2rem;
