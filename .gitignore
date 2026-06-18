@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Obsidian vault data (for development testing)
+.obsidian/
+*.md
+!.gitignore
+!README.md
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
