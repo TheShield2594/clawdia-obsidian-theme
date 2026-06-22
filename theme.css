@@ -618,8 +618,7 @@ body {
 .theme-dark .task-list-item.is-checked > p,
 .theme-dark .task-list-item.is-checked {
   color: var(--clawdia-ink-400);
-  text-decoration: line-through;
-  text-decoration-color: var(--clawdia-claw-500);
+  text-decoration: line-through var(--clawdia-claw-500);
 }
 
 .theme-light input[type=checkbox] {
@@ -635,8 +634,7 @@ body {
 .theme-light .task-list-item.is-checked > p,
 .theme-light .task-list-item.is-checked {
   color: var(--clawdia-ink-500);
-  text-decoration: line-through;
-  text-decoration-color: var(--clawdia-claw-500);
+  text-decoration: line-through var(--clawdia-claw-500);
 }
 
 /* ============================================================
@@ -763,18 +761,6 @@ body {
 /* ============================================================
    SCROLLBARS
    ============================================================ */
-body {
-  scrollbar-width: thin;
-}
-
-.theme-dark {
-  scrollbar-color: var(--clawdia-ink-700) transparent;
-}
-
-.theme-light {
-  scrollbar-color: var(--clawdia-cream-200) transparent;
-}
-
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -936,16 +922,16 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
   border-left: 2px solid var(--clawdia-claw-400);
 }
 
-.theme-dark .cm-editor .cm-selectionBackground {
-  background: rgba(217, 119, 66, 0.22) !important;
+.theme-dark .cm-editor .cm-selectionLayer .cm-selectionBackground {
+  background: rgba(217, 119, 66, 0.22);
 }
 
 .theme-light .cm-editor .cm-cursor {
   border-left: 2px solid var(--clawdia-claw-500);
 }
 
-.theme-light .cm-editor .cm-selectionBackground {
-  background: rgba(217, 119, 66, 0.18) !important;
+.theme-light .cm-editor .cm-selectionLayer .cm-selectionBackground {
+  background: rgba(217, 119, 66, 0.18);
 }
 
 /* ============================================================
