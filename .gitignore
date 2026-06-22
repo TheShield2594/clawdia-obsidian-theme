@@ -7,6 +7,7 @@ Thumbs.db
 *.md
 !.gitignore
 !README.md
+!CHANGELOG.md
 
 # Editor files
 *.swp
