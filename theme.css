@@ -61,13 +61,14 @@ settings:
   --clawdia-ink-200: #d4cbb9;
   --clawdia-ink-100: #ece4d2;
 
-  /* Claw (amber-orange accent) */
-  --clawdia-claw-600: #c25f2e;
+  /* Claw (amber-orange accent) — shades derive from claw-500, the
+     variable exposed to Style Settings, so a custom accent cascades. */
   --clawdia-claw-500: #d97742;
-  --clawdia-claw-400: #e89163;
-  --clawdia-claw-300: #f0ad88;
-  --clawdia-claw-100: #f7d8c4;
-  --clawdia-claw-700: #a04a1c; /* AA-contrast variant for light-mode body text on cream-50 */
+  --clawdia-claw-600: color-mix(in srgb, var(--clawdia-claw-500) 86%, black);
+  --clawdia-claw-400: color-mix(in srgb, var(--clawdia-claw-500) 82%, white);
+  --clawdia-claw-300: color-mix(in srgb, var(--clawdia-claw-500) 61%, white);
+  --clawdia-claw-100: color-mix(in srgb, var(--clawdia-claw-500) 30%, white);
+  --clawdia-claw-700: color-mix(in srgb, var(--clawdia-claw-500) 70%, black); /* AA-contrast variant for light-mode body text on cream-50 */
 
   /* Moss / Plum */
   --clawdia-moss-500: #6a7a44;
