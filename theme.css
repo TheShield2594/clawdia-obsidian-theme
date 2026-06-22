@@ -1,6 +1,42 @@
 /* Clawdia — Obsidian Theme */
 /* Ancient cat. Gothic warmth. Creamy shadows and ember glow. */
 
+/* @settings
+
+name: Clawdia
+id: clawdia-theme
+settings:
+    -
+        id: clawdia-claw-500
+        title: Accent Color
+        description: The ember-orange accent used for links, buttons, and highlights
+        type: variable-color
+        format: hex
+        default: '#d97742'
+    -
+        id: font-text-size
+        title: Body Font Size
+        type: variable-number-slider
+        default: 16
+        min: 14
+        max: 20
+        step: 1
+        format: px
+    -
+        id: clawdia-hide-watermark
+        title: Hide Paw Watermark
+        description: Hide the cat paw watermark on empty workspace panes
+        type: class-toggle
+        default: false
+    -
+        id: clawdia-hide-heading-ornament
+        title: Hide Heading Ornament
+        description: Hide the ✦ ornament before H1 headings
+        type: class-toggle
+        default: false
+
+*/
+
 /* ============================================================
    CSS VARIABLES — exact Clawdia design system palette
    ============================================================ */
@@ -25,12 +61,14 @@
   --clawdia-ink-200: #d4cbb9;
   --clawdia-ink-100: #ece4d2;
 
-  /* Claw (amber-orange accent) */
-  --clawdia-claw-600: #c25f2e;
+  /* Claw (amber-orange accent) — shades derive from claw-500, the
+     variable exposed to Style Settings, so a custom accent cascades. */
   --clawdia-claw-500: #d97742;
-  --clawdia-claw-400: #e89163;
-  --clawdia-claw-300: #f0ad88;
-  --clawdia-claw-100: #f7d8c4;
+  --clawdia-claw-600: color-mix(in srgb, var(--clawdia-claw-500) 86%, black);
+  --clawdia-claw-400: color-mix(in srgb, var(--clawdia-claw-500) 82%, white);
+  --clawdia-claw-300: color-mix(in srgb, var(--clawdia-claw-500) 61%, white);
+  --clawdia-claw-100: color-mix(in srgb, var(--clawdia-claw-500) 30%, white);
+  --clawdia-claw-700: color-mix(in srgb, var(--clawdia-claw-500) 70%, black); /* AA-contrast variant for light-mode body text on cream-50 */
 
   /* Moss / Plum */
   --clawdia-moss-500: #6a7a44;
@@ -111,7 +149,7 @@
   --text-warning:   #a06c10;
   --text-success:   var(--clawdia-good);
   --text-selection: rgba(217, 119, 66, 0.2);
-  --text-accent:       var(--clawdia-claw-500);
+  --text-accent:       var(--clawdia-claw-700);
   --text-accent-hover: var(--clawdia-claw-600);
 
   --interactive-normal:      var(--clawdia-cream-100);
@@ -240,7 +278,7 @@ body {
 }
 
 .theme-light {
-  --link-color:            var(--clawdia-claw-500);
+  --link-color:            var(--clawdia-claw-700);
   --link-color-hover:      var(--clawdia-claw-600);
   --link-unresolved-color: var(--clawdia-plum-500);
   --link-unresolved-opacity: 0.85;
@@ -875,16 +913,16 @@ body {
 /* ============================================================
    READING VIEW — heading ornaments
    ============================================================ */
-.theme-dark .markdown-rendered h1::before,
-.theme-dark .markdown-source-view.mod-cm6 .HyperMD-header-1::before {
+body.theme-dark:not(.clawdia-hide-heading-ornament) .markdown-rendered h1::before,
+body.theme-dark:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-cm6 .HyperMD-header-1::before {
   content: "✦ ";
   color: var(--clawdia-claw-500);
   font-size: 0.65em;
   vertical-align: middle;
 }
 
-.theme-light .markdown-rendered h1::before,
-.theme-light .markdown-source-view.mod-cm6 .HyperMD-header-1::before {
+body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-rendered h1::before,
+body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-cm6 .HyperMD-header-1::before {
   content: "✦ ";
   color: var(--clawdia-claw-600);
   font-size: 0.65em;
@@ -892,9 +930,177 @@ body {
 }
 
 /* ============================================================
+   EDITOR CURSOR & SELECTION (live preview)
+   ============================================================ */
+.theme-dark .cm-editor .cm-cursor {
+  border-left: 2px solid var(--clawdia-claw-400);
+}
+
+.theme-dark .cm-editor .cm-selectionBackground {
+  background: rgba(217, 119, 66, 0.22) !important;
+}
+
+.theme-light .cm-editor .cm-cursor {
+  border-left: 2px solid var(--clawdia-claw-500);
+}
+
+.theme-light .cm-editor .cm-selectionBackground {
+  background: rgba(217, 119, 66, 0.18) !important;
+}
+
+/* ============================================================
+   RIBBON (left icon bar)
+   ============================================================ */
+.theme-dark .side-dock-ribbon-action {
+  color: var(--clawdia-ink-400);
+}
+
+.theme-dark .side-dock-ribbon-action:hover {
+  color: var(--clawdia-claw-300);
+  background: rgba(217, 119, 66, 0.1);
+}
+
+.theme-dark .side-dock-ribbon-action.is-active {
+  color: var(--clawdia-claw-400);
+}
+
+.theme-light .side-dock-ribbon-action {
+  color: var(--clawdia-ink-500);
+}
+
+.theme-light .side-dock-ribbon-action:hover {
+  color: var(--clawdia-claw-600);
+  background: rgba(217, 119, 66, 0.1);
+}
+
+.theme-light .side-dock-ribbon-action.is-active {
+  color: var(--clawdia-claw-500);
+}
+
+/* ============================================================
+   MENUS — right-click context menu, slash command menu
+   ============================================================ */
+.theme-dark .menu {
+  background: var(--clawdia-ink-900);
+  border: 1px solid var(--clawdia-ink-700);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+.theme-dark .menu-item:hover {
+  background: rgba(217, 119, 66, 0.12);
+  color: var(--clawdia-claw-300);
+}
+
+.theme-dark .menu-item-icon {
+  color: var(--clawdia-ink-400);
+}
+
+.theme-light .menu {
+  background: var(--clawdia-cream-50);
+  border: 1px solid var(--clawdia-cream-200);
+  box-shadow: 0 12px 36px rgba(20, 17, 13, 0.16);
+}
+
+.theme-light .menu-item:hover {
+  background: var(--clawdia-claw-100);
+  color: var(--clawdia-claw-600);
+}
+
+.theme-light .menu-item-icon {
+  color: var(--clawdia-ink-500);
+}
+
+/* ============================================================
+   EMBEDS — embedded notes, images, PDFs
+   ============================================================ */
+.theme-dark .markdown-embed {
+  border: 1px solid var(--clawdia-ink-700);
+  background: var(--clawdia-ink-900);
+  border-radius: 6px;
+}
+
+.theme-dark .markdown-embed-title {
+  color: var(--clawdia-claw-300);
+  font-family: var(--font-text-theme);
+}
+
+.theme-dark .image-embed,
+.theme-dark .pdf-embed {
+  border: 1px solid var(--clawdia-ink-700);
+  border-radius: 6px;
+}
+
+.theme-light .markdown-embed {
+  border: 1px solid var(--clawdia-cream-200);
+  background: var(--clawdia-cream-50);
+  border-radius: 6px;
+}
+
+.theme-light .markdown-embed-title {
+  color: var(--clawdia-claw-600);
+  font-family: var(--font-text-theme);
+}
+
+.theme-light .image-embed,
+.theme-light .pdf-embed {
+  border: 1px solid var(--clawdia-cream-200);
+  border-radius: 6px;
+}
+
+/* ============================================================
+   FRONTMATTER PROPERTY TYPE ICONS
+   ============================================================ */
+.theme-dark .metadata-property-icon {
+  color: var(--clawdia-ink-400);
+}
+
+.theme-dark .metadata-property:hover .metadata-property-icon {
+  color: var(--clawdia-claw-400);
+}
+
+.theme-light .metadata-property-icon {
+  color: var(--clawdia-ink-500);
+}
+
+.theme-light .metadata-property:hover .metadata-property-icon {
+  color: var(--clawdia-claw-500);
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+.theme-dark.is-mobile .mobile-navbar,
+.theme-dark.is-mobile .workspace-drawer {
+  background: var(--clawdia-ink-900);
+  border-color: var(--clawdia-ink-700);
+}
+
+.theme-dark.is-mobile .mobile-navbar-tab-icon {
+  color: var(--clawdia-ink-400);
+}
+
+.theme-dark.is-mobile .mobile-navbar-tab-icon.is-active {
+  color: var(--clawdia-claw-400);
+}
+
+.theme-light.is-mobile .mobile-navbar,
+.theme-light.is-mobile .workspace-drawer {
+  background: var(--clawdia-cream-100);
+  border-color: var(--clawdia-cream-200);
+}
+
+.theme-light.is-mobile .mobile-navbar-tab-icon {
+  color: var(--clawdia-ink-500);
+}
+
+.theme-light.is-mobile .mobile-navbar-tab-icon.is-active {
+  color: var(--clawdia-claw-500);
+}
+
+/* ============================================================
    SIGNATURE — subtle paw watermark on empty workspace
    ============================================================ */
-.theme-dark .workspace-leaf-content[data-type="empty"] .view-content::after {
+body.theme-dark:not(.clawdia-hide-watermark) .workspace-leaf-content[data-type="empty"] .view-content::after {
   content: "🐈";
   position: absolute;
   bottom: 2rem;
@@ -905,7 +1111,7 @@ body {
   user-select: none;
 }
 
-.theme-light .workspace-leaf-content[data-type="empty"] .view-content::after {
+body.theme-light:not(.clawdia-hide-watermark) .workspace-leaf-content[data-type="empty"] .view-content::after {
   content: "🐈";
   position: absolute;
   bottom: 2rem;
