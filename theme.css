@@ -618,7 +618,8 @@ body {
 .theme-dark .task-list-item.is-checked > p,
 .theme-dark .task-list-item.is-checked {
   color: var(--clawdia-ink-400);
-  text-decoration: line-through var(--clawdia-claw-500);
+  text-decoration-line: line-through;
+  text-decoration-color: var(--clawdia-claw-500);
 }
 
 .theme-light input[type=checkbox] {
@@ -634,7 +635,8 @@ body {
 .theme-light .task-list-item.is-checked > p,
 .theme-light .task-list-item.is-checked {
   color: var(--clawdia-ink-500);
-  text-decoration: line-through var(--clawdia-claw-500);
+  text-decoration-line: line-through;
+  text-decoration-color: var(--clawdia-claw-500);
 }
 
 /* ============================================================
