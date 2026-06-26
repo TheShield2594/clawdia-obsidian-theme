@@ -40,15 +40,28 @@ Clawdia is a warm, gothic-inspired theme for [Obsidian](https://obsidian.md), bu
 
 ## 🎨 Color Palette
 
+> **Note:** All shades below `claw-500` are derived at runtime via `color-mix()` from the accent color. The values shown here are the computed result when using the default `#d97742` accent. Changing the accent in Style Settings recalculates all shades automatically.
+
 | Role | Dark | Light |
 |------|------|-------|
 | Background | `#14110d` (ink-950) | `#faf6ef` (cream-50) |
 | Text | `#f3ecdd` (cream-100) | `#14110d` (ink-950) |
 | Accent | `#d97742` (claw-500) | `#d97742` (claw-500) |
-| Headings | `#f0ad88` (claw-300) | `#c25f2e` (claw-600) |
-| Links | `#e89163` (claw-400) | `#d97742` (claw-500) |
+| Headings | `#e8ac8c` (claw-300) | `#98532e` (claw-700) |
+| Links | `#e08f64` (claw-400) | `#98532e` (claw-700) |
 | Unresolved links | `#7e5570` (plum-500) | `#7e5570` (plum-500) |
 | External links | `#8a9863` (moss-400) | `#6a7a44` (moss-500) |
+
+### Full Accent Scale
+
+| Shade | Hex | Derivation |
+|-------|-----|------------|
+| claw-700 | `#98532e` | 70% claw + 30% black |
+| claw-600 | `#bb6639` | 86% claw + 14% black |
+| claw-500 | `#d97742` | Base accent (user-configurable) |
+| claw-400 | `#e08f64` | 82% claw + 18% white |
+| claw-300 | `#e8ac8c` | 61% claw + 39% white |
+| claw-100 | `#f4d6c6` | 30% claw + 70% white |
 
 ## 🔤 Fonts
 
