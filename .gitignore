@@ -4,10 +4,6 @@ Thumbs.db
 
 # Obsidian vault data (for development testing)
 .obsidian/
-*.md
-!.gitignore
-!README.md
-!CHANGELOG.md
 
 # Editor files
 *.swp
