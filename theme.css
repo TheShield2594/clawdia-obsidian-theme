@@ -14,15 +14,6 @@ settings:
         format: hex
         default: '#d97742'
     -
-        id: font-text-size
-        title: Body Font Size
-        type: variable-number-slider
-        default: 16
-        min: 14
-        max: 20
-        step: 1
-        format: px
-    -
         id: clawdia-hide-watermark
         title: Hide Paw Watermark
         description: Hide the cat paw watermark on empty workspace panes
@@ -71,6 +62,7 @@ settings:
   --clawdia-claw-700: color-mix(in srgb, var(--clawdia-claw-500) 70%, black); /* AA-contrast variant for light-mode body text on cream-50 */
 
   /* Moss / Plum */
+  --clawdia-moss-600: #566334;
   --clawdia-moss-500: #6a7a44;
   --clawdia-moss-400: #8a9863;
   --clawdia-plum-500: #7e5570;
@@ -97,7 +89,7 @@ settings:
   --background-modifier-error:   rgba(185, 76, 60, 0.2);
   --background-modifier-error-rgb: 185, 76, 60;
   --background-modifier-cover:   rgba(10, 8, 6, 0.7);
-  --background-modifier-active:  rgba(217, 119, 66, 0.12);
+  --background-modifier-active:  color-mix(in srgb, var(--clawdia-claw-500) 12%, transparent);
   --background-modifier-message: var(--clawdia-ink-800);
 
   --text-normal:    var(--clawdia-cream-100);
@@ -107,7 +99,7 @@ settings:
   --text-error:     #d68a7e;
   --text-warning:   #e0b85a;
   --text-success:   #91c08e;
-  --text-selection: rgba(217, 119, 66, 0.28);
+  --text-selection: color-mix(in srgb, var(--clawdia-claw-500) 28%, transparent);
   --text-accent:       var(--clawdia-claw-400);
   --text-accent-hover: var(--clawdia-claw-300);
 
@@ -131,8 +123,8 @@ settings:
   --icon-color-focused:         var(--clawdia-claw-300);
 
   /* Nav item colors */
-  --nav-item-background-hover:  rgba(217, 119, 66, 0.08);
-  --nav-item-background-active: rgba(217, 119, 66, 0.15);
+  --nav-item-background-hover:  color-mix(in srgb, var(--clawdia-claw-500) 8%, transparent);
+  --nav-item-background-active: color-mix(in srgb, var(--clawdia-claw-500) 15%, transparent);
   --nav-item-color:             var(--clawdia-ink-200);
   --nav-item-color-hover:       var(--clawdia-claw-300);
   --nav-item-color-active:      var(--clawdia-claw-300);
@@ -185,7 +177,7 @@ settings:
   --input-radius:                 6px;
 
   /* Drag ghost */
-  --drag-ghost-background:        rgba(217, 119, 66, 0.15);
+  --drag-ghost-background:        color-mix(in srgb, var(--clawdia-claw-500) 15%, transparent);
   --drag-ghost-text-color:        var(--clawdia-claw-300);
 
   /* Embed radius */
@@ -217,7 +209,7 @@ settings:
   --background-modifier-error:   rgba(185, 76, 60, 0.1);
   --background-modifier-error-rgb: 185, 76, 60;
   --background-modifier-cover:   rgba(20, 17, 13, 0.4);
-  --background-modifier-active:  rgba(217, 119, 66, 0.10);
+  --background-modifier-active:  color-mix(in srgb, var(--clawdia-claw-500) 10%, transparent);
   --background-modifier-message: var(--clawdia-cream-200);
 
   --text-normal:    var(--clawdia-ink-950);
@@ -225,9 +217,9 @@ settings:
   --text-faint:     var(--clawdia-ink-400);
   --text-on-accent: #ffffff;
   --text-error:     var(--clawdia-bad);
-  --text-warning:   #a06c10;
+  --text-warning:   #8a5d0c;
   --text-success:   var(--clawdia-good);
-  --text-selection: rgba(217, 119, 66, 0.2);
+  --text-selection: color-mix(in srgb, var(--clawdia-claw-500) 20%, transparent);
   --text-accent:       var(--clawdia-claw-700);
   --text-accent-hover: var(--clawdia-claw-600);
 
@@ -247,11 +239,11 @@ settings:
   /* Icon colors */
   --icon-color:                 var(--clawdia-ink-500);
   --icon-color-hover:           var(--clawdia-claw-600);
-  --icon-color-active:          var(--clawdia-claw-500);
+  --icon-color-active:          var(--clawdia-claw-600);
   --icon-color-focused:         var(--clawdia-claw-600);
 
   /* Nav item colors */
-  --nav-item-background-hover:  rgba(217, 119, 66, 0.08);
+  --nav-item-background-hover:  color-mix(in srgb, var(--clawdia-claw-500) 8%, transparent);
   --nav-item-background-active: var(--clawdia-claw-100);
   --nav-item-color:             var(--clawdia-ink-700);
   --nav-item-color-hover:       var(--clawdia-ink-950);
@@ -260,7 +252,7 @@ settings:
   --nav-item-weight-hover:      500;
   --nav-item-weight-active:     600;
   --nav-collapse-icon-color:          var(--clawdia-ink-500);
-  --nav-collapse-icon-color-collapsed: var(--clawdia-claw-500);
+  --nav-collapse-icon-color-collapsed: var(--clawdia-claw-600);
   --nav-indent-width:           18px;
 
   /* Titlebar */
@@ -290,7 +282,7 @@ settings:
 
   /* Vault name */
   --vault-name-font-size:         14px;
-  --vault-name-color:             var(--clawdia-claw-500);
+  --vault-name-color:             var(--clawdia-claw-700);
   --vault-name-color-interactive: var(--clawdia-claw-600);
 
   /* Link decoration */
@@ -305,7 +297,7 @@ settings:
   --input-radius:                 6px;
 
   /* Drag ghost */
-  --drag-ghost-background:        rgba(217, 119, 66, 0.12);
+  --drag-ghost-background:        color-mix(in srgb, var(--clawdia-claw-500) 12%, transparent);
   --drag-ghost-text-color:        var(--clawdia-claw-600);
 
   /* Embed radius */
@@ -438,7 +430,7 @@ body {
   --link-unresolved-opacity: 0.85;
   --link-unresolved-decoration-style: dashed;
   --link-external-color:   var(--clawdia-moss-500);
-  --link-external-color-hover: var(--clawdia-moss-400);
+  --link-external-color-hover: var(--clawdia-moss-600);
 }
 
 /* ============================================================
@@ -446,9 +438,9 @@ body {
    ============================================================ */
 .theme-dark {
   --tag-color:             var(--clawdia-claw-300);
-  --tag-background:        rgba(var(--interactive-accent-rgb), 0.12);
-  --tag-background-hover:  rgba(var(--interactive-accent-rgb), 0.22);
-  --tag-border-color:      rgba(var(--interactive-accent-rgb), 0.28);
+  --tag-background:        color-mix(in srgb, var(--clawdia-claw-500) 12%, transparent);
+  --tag-background-hover:  color-mix(in srgb, var(--clawdia-claw-500) 22%, transparent);
+  --tag-border-color:      color-mix(in srgb, var(--clawdia-claw-500) 28%, transparent);
   --tag-border-width:      1px;
   --tag-padding-x:         8px;
   --tag-padding-y:         2px;
@@ -457,9 +449,9 @@ body {
 
 .theme-light {
   --tag-color:             var(--clawdia-claw-700);
-  --tag-background:        rgba(var(--interactive-accent-rgb), 0.08);
-  --tag-background-hover:  rgba(var(--interactive-accent-rgb), 0.16);
-  --tag-border-color:      rgba(var(--interactive-accent-rgb), 0.25);
+  --tag-background:        color-mix(in srgb, var(--clawdia-claw-500) 8%, transparent);
+  --tag-background-hover:  color-mix(in srgb, var(--clawdia-claw-500) 16%, transparent);
+  --tag-border-color:      color-mix(in srgb, var(--clawdia-claw-500) 25%, transparent);
   --tag-border-width:      1px;
   --tag-padding-x:         8px;
   --tag-padding-y:         2px;
@@ -485,39 +477,44 @@ body {
 }
 
 .theme-light {
-  --code-background:  var(--clawdia-cream-200);
+  --code-background:  var(--clawdia-cream-100);
   --code-normal:      var(--clawdia-ink-900);
   --code-comment:     var(--clawdia-ink-600);
-  --code-function:    var(--clawdia-claw-600);
-  --code-important:   var(--clawdia-claw-500);
+  --code-function:    var(--clawdia-claw-700);
+  --code-important:   var(--clawdia-claw-700);
   --code-keyword:     var(--clawdia-plum-500);
   --code-operator:    var(--clawdia-ink-600);
   --code-property:    var(--clawdia-moss-500);
   --code-punctuation: var(--clawdia-ink-500);
   --code-string:      var(--clawdia-moss-500);
-  --code-tag:         var(--clawdia-claw-600);
-  --code-value:       var(--clawdia-claw-500);
+  --code-tag:         var(--clawdia-claw-700);
+  --code-value:       var(--clawdia-claw-700);
 }
 
 /* ============================================================
    BLOCKQUOTES
    ============================================================ */
-.theme-dark blockquote {
-  border-left: 3px solid var(--clawdia-claw-500);
-  background: rgba(217, 119, 66, 0.06);
-  padding: 0.75em 1.25em;
-  border-radius: 0 6px 6px 0;
-  color: var(--clawdia-ink-200);
-  font-style: italic;
+/* Variables cover both reading view and live preview */
+.theme-dark {
+  --blockquote-border-thickness:  3px;
+  --blockquote-border-color:      var(--clawdia-claw-500);
+  --blockquote-background-color:  color-mix(in srgb, var(--clawdia-claw-500) 6%, transparent);
+  --blockquote-color:             var(--clawdia-ink-200);
+  --blockquote-font-style:        italic;
 }
 
-.theme-light blockquote {
-  border-left: 3px solid var(--clawdia-claw-500);
-  background: rgba(var(--interactive-accent-rgb), 0.07);
+.theme-light {
+  --blockquote-border-thickness:  3px;
+  --blockquote-border-color:      var(--clawdia-claw-500);
+  --blockquote-background-color:  color-mix(in srgb, var(--clawdia-claw-500) 7%, transparent);
+  --blockquote-color:             var(--clawdia-ink-700);
+  --blockquote-font-style:        italic;
+}
+
+/* Reading-view-only polish on top of the variables */
+.markdown-rendered blockquote {
   padding: 0.75em 1.25em;
   border-radius: 0 6px 6px 0;
-  color: var(--clawdia-ink-700);
-  font-style: italic;
 }
 
 /* ============================================================
@@ -543,13 +540,14 @@ body {
   --table-border-width:              1px;
   --table-header-background:         var(--clawdia-ink-900);
   --table-header-background-hover:   var(--clawdia-ink-850);
-  --table-row-background-hover:      rgba(217, 119, 66, 0.05);
+  --table-row-background-hover:      color-mix(in srgb, var(--clawdia-claw-500) 5%, transparent);
   --table-column-max-width:          400px;
   --table-column-min-width:          100px;
-  --table-column-first-border:       none;
-  --table-column-last-border:        none;
-  --table-row-last-border:           none;
-  --table-header-border:             2px solid var(--clawdia-claw-500);
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width:  0;
+  --table-row-last-border-width:     0;
+  --table-header-border-width:       2px;
+  --table-header-border-color:       var(--clawdia-claw-500);
   --table-header-color:              var(--clawdia-claw-300);
 }
 
@@ -558,39 +556,56 @@ body {
   --table-border-width:            1px;
   --table-header-background:       var(--clawdia-cream-100);
   --table-header-background-hover: var(--clawdia-cream-200);
-  --table-row-background-hover:    rgba(var(--interactive-accent-rgb), 0.05);
+  --table-row-background-hover:    color-mix(in srgb, var(--clawdia-claw-500) 5%, transparent);
   --table-column-max-width:        400px;
   --table-column-min-width:        100px;
-  --table-column-first-border:     none;
-  --table-column-last-border:      none;
-  --table-row-last-border:         none;
-  --table-header-border:           2px solid var(--clawdia-claw-500);
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width:  0;
+  --table-row-last-border-width:     0;
+  --table-header-border-width:     2px;
+  --table-header-border-color:     var(--clawdia-claw-500);
   --table-header-color:            var(--clawdia-claw-700);
 }
 
 /* ============================================================
    CALLOUTS
    ============================================================ */
+/* Obsidian consumes callout type colors as RGB triplets inside
+   rgba(var(--callout-color), …), so hex/var() values here are invalid.
+   The "danger" callout maps to --callout-error; --callout-danger
+   does not exist. */
 .theme-dark {
-  --callout-default: var(--clawdia-ink-300);
-  --callout-info:    var(--clawdia-moss-400);
-  --callout-warning: var(--clawdia-claw-400);
-  --callout-danger:  var(--clawdia-bad);
-  --callout-success: var(--clawdia-good);
-  --callout-tip:     var(--clawdia-claw-300);
-  --callout-question: #c3aedd;
-  --callout-quote:   var(--clawdia-ink-300);
+  --callout-default:   181, 171, 154; /* ink-300 */
+  --callout-summary:   232, 172, 140; /* claw-300 */
+  --callout-info:      138, 152, 99;  /* moss-400 */
+  --callout-todo:      138, 152, 99;  /* moss-400 */
+  --callout-tip:       232, 172, 140; /* claw-300 */
+  --callout-important: 232, 172, 140; /* claw-300 */
+  --callout-success:   145, 192, 142; /* text-success green */
+  --callout-question:  195, 174, 221; /* lavender (matches code keyword) */
+  --callout-warning:   224, 143, 100; /* claw-400 */
+  --callout-fail:      214, 138, 126; /* text-error red */
+  --callout-error:     214, 138, 126; /* text-error red */
+  --callout-bug:       214, 138, 126; /* text-error red */
+  --callout-example:   195, 174, 221; /* lavender */
+  --callout-quote:     181, 171, 154; /* ink-300 */
 }
 
 .theme-light {
-  --callout-default: var(--clawdia-ink-400);
-  --callout-info:    var(--clawdia-moss-500);
-  --callout-warning: var(--clawdia-claw-500);
-  --callout-danger:  var(--clawdia-bad);
-  --callout-success: var(--clawdia-good);
-  --callout-tip:     var(--clawdia-claw-400);
-  --callout-question: var(--clawdia-plum-500);
-  --callout-quote:   var(--clawdia-ink-400);
+  --callout-default:   111, 100, 87;  /* ink-500 */
+  --callout-summary:   152, 83, 46;   /* claw-700 */
+  --callout-info:      106, 122, 68;  /* moss-500 */
+  --callout-todo:      106, 122, 68;  /* moss-500 */
+  --callout-tip:       152, 83, 46;   /* claw-700 */
+  --callout-important: 152, 83, 46;   /* claw-700 */
+  --callout-success:   93, 138, 90;   /* good green */
+  --callout-question:  126, 85, 112;  /* plum-500 */
+  --callout-warning:   138, 93, 12;   /* dark amber */
+  --callout-fail:      185, 76, 60;   /* bad red */
+  --callout-error:     185, 76, 60;   /* bad red */
+  --callout-bug:       185, 76, 60;   /* bad red */
+  --callout-example:   126, 85, 112;  /* plum-500 */
+  --callout-quote:     111, 100, 87;  /* ink-500 */
 }
 
 /* ============================================================
@@ -605,13 +620,13 @@ body {
 
 .theme-dark .nav-file-title:hover,
 .theme-dark .nav-folder-title:hover {
-  background: rgba(217, 119, 66, 0.08);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 8%, transparent);
   color: var(--clawdia-claw-300);
 }
 
 .theme-dark .nav-file-title.is-active,
 .theme-dark .nav-folder-title.is-active {
-  background: rgba(217, 119, 66, 0.15);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 15%, transparent);
   color: var(--clawdia-claw-300);
   font-weight: 600;
 }
@@ -630,7 +645,7 @@ body {
 
 .theme-light .nav-file-title:hover,
 .theme-light .nav-folder-title:hover {
-  background: rgba(var(--interactive-accent-rgb), 0.08);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 8%, transparent);
   color: var(--clawdia-ink-950);
 }
 
@@ -707,7 +722,7 @@ body {
 
 .theme-dark .search-result-file-matched-text {
   color: var(--clawdia-claw-300);
-  background: rgba(217, 119, 66, 0.18);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 18%, transparent);
   border-radius: 3px;
   padding: 0 2px;
 }
@@ -797,7 +812,7 @@ body {
    HIGHLIGHTS
    ============================================================ */
 .theme-dark mark {
-  background: rgba(217, 119, 66, 0.28);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 28%, transparent);
   color: var(--clawdia-claw-100);
   border-radius: 2px;
   padding: 0 2px;
@@ -806,6 +821,8 @@ body {
 .theme-light mark {
   background: var(--clawdia-claw-100);
   color: var(--clawdia-claw-700);
+  border-radius: 2px;
+  padding: 0 2px;
 }
 
 /* ============================================================
@@ -833,7 +850,7 @@ body {
 .theme-dark .modal {
   background: var(--clawdia-ink-900);
   border: 1px solid var(--clawdia-ink-700);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(217, 119, 66, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px color-mix(in srgb, var(--clawdia-claw-500) 8%, transparent);
 }
 
 .theme-dark .modal-title {
@@ -872,7 +889,7 @@ body {
 }
 
 .theme-dark .suggestion-item.is-selected {
-  background: rgba(217, 119, 66, 0.12);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 12%, transparent);
   color: var(--clawdia-claw-300);
   border-radius: 6px;
 }
@@ -953,7 +970,7 @@ body {
   font-weight: 600;
   border: none;
   border-radius: 999px;
-  box-shadow: 0 4px 0 var(--clawdia-claw-600), 0 8px 20px -8px rgba(217, 119, 66, 0.5);
+  box-shadow: 0 4px 0 var(--clawdia-claw-600), 0 8px 20px -8px color-mix(in srgb, var(--clawdia-claw-500) 50%, transparent);
 }
 
 .theme-dark button.mod-cta:hover {
@@ -962,7 +979,7 @@ body {
 }
 
 .theme-dark button.mod-cta:active {
-  box-shadow: 0 1px 0 var(--clawdia-claw-600), 0 2px 8px -4px rgba(217, 119, 66, 0.5);
+  box-shadow: 0 1px 0 var(--clawdia-claw-600), 0 2px 8px -4px color-mix(in srgb, var(--clawdia-claw-500) 50%, transparent);
   transform: translateY(3px);
 }
 
@@ -972,7 +989,7 @@ body {
   font-weight: 600;
   border: none;
   border-radius: 999px;
-  box-shadow: 0 4px 0 var(--clawdia-claw-600), 0 8px 20px -8px rgba(217, 119, 66, 0.45);
+  box-shadow: 0 4px 0 var(--clawdia-claw-600), 0 8px 20px -8px color-mix(in srgb, var(--clawdia-claw-500) 45%, transparent);
 }
 
 .theme-light button.mod-cta:hover {
@@ -981,7 +998,7 @@ body {
 }
 
 .theme-light button.mod-cta:active {
-  box-shadow: 0 1px 0 var(--clawdia-claw-600), 0 2px 8px -4px rgba(217, 119, 66, 0.45);
+  box-shadow: 0 1px 0 var(--clawdia-claw-600), 0 2px 8px -4px color-mix(in srgb, var(--clawdia-claw-500) 45%, transparent);
   transform: translateY(3px);
 }
 
@@ -1008,7 +1025,7 @@ body {
 }
 
 .theme-light .metadata-property-key {
-  color: var(--clawdia-claw-500);
+  color: var(--clawdia-claw-700);
   font-weight: 500;
 }
 
@@ -1051,7 +1068,7 @@ body {
 }
 
 .theme-light .collapse-icon:hover svg path {
-  stroke: var(--clawdia-claw-500);
+  stroke: var(--clawdia-claw-600);
 }
 
 /* ============================================================
@@ -1081,7 +1098,7 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
 }
 
 .theme-dark .cm-editor .cm-selectionLayer .cm-selectionBackground {
-  background: rgba(217, 119, 66, 0.22);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 22%, transparent);
 }
 
 .theme-light .cm-editor .cm-cursor {
@@ -1089,7 +1106,7 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
 }
 
 .theme-light .cm-editor .cm-selectionLayer .cm-selectionBackground {
-  background: rgba(var(--interactive-accent-rgb), 0.18);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 18%, transparent);
 }
 
 /* ============================================================
@@ -1101,7 +1118,7 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
 
 .theme-dark .side-dock-ribbon-action:hover {
   color: var(--clawdia-claw-300);
-  background: rgba(217, 119, 66, 0.1);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 10%, transparent);
 }
 
 .theme-dark .side-dock-ribbon-action.is-active {
@@ -1114,11 +1131,11 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
 
 .theme-light .side-dock-ribbon-action:hover {
   color: var(--clawdia-claw-600);
-  background: rgba(var(--interactive-accent-rgb), 0.1);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 10%, transparent);
 }
 
 .theme-light .side-dock-ribbon-action.is-active {
-  color: var(--clawdia-claw-500);
+  color: var(--clawdia-claw-600);
 }
 
 /* ============================================================
@@ -1131,7 +1148,7 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
 }
 
 .theme-dark .menu-item:hover {
-  background: rgba(217, 119, 66, 0.12);
+  background: color-mix(in srgb, var(--clawdia-claw-500) 12%, transparent);
   color: var(--clawdia-claw-300);
 }
 
@@ -1207,7 +1224,7 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
 }
 
 .theme-light .metadata-property:hover .metadata-property-icon {
-  color: var(--clawdia-claw-500);
+  color: var(--clawdia-claw-600);
 }
 
 /* ============================================================
@@ -1238,7 +1255,7 @@ body.theme-light:not(.clawdia-hide-heading-ornament) .markdown-source-view.mod-c
 }
 
 .theme-light.is-mobile .mobile-navbar-tab-icon.is-active {
-  color: var(--clawdia-claw-500);
+  color: var(--clawdia-claw-600);
 }
 
 /* ============================================================
@@ -1255,7 +1272,7 @@ body.theme-dark:not(.clawdia-hide-watermark) .workspace-leaf-content[data-type="
   height: 64px;
   pointer-events: none;
   user-select: none;
-  background-color: rgba(217, 119, 66, 0.06);
+  background-color: color-mix(in srgb, var(--clawdia-claw-500) 6%, transparent);
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- main pad --%3E%3Cellipse cx='50' cy='65' rx='22' ry='18'/%3E%3C!-- toe beans --%3E%3Cellipse cx='28' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='42' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='72' cy='40' rx='7' ry='9'/%3E%3C/svg%3E") no-repeat center / contain;
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- main pad --%3E%3Cellipse cx='50' cy='65' rx='22' ry='18'/%3E%3C!-- toe beans --%3E%3Cellipse cx='28' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='42' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='72' cy='40' rx='7' ry='9'/%3E%3C/svg%3E") no-repeat center / contain;
 }
@@ -1269,7 +1286,7 @@ body.theme-light:not(.clawdia-hide-watermark) .workspace-leaf-content[data-type=
   height: 64px;
   pointer-events: none;
   user-select: none;
-  background-color: rgba(var(--interactive-accent-rgb), 0.08);
+  background-color: color-mix(in srgb, var(--clawdia-claw-500) 8%, transparent);
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- main pad --%3E%3Cellipse cx='50' cy='65' rx='22' ry='18'/%3E%3C!-- toe beans --%3E%3Cellipse cx='28' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='42' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='72' cy='40' rx='7' ry='9'/%3E%3C/svg%3E") no-repeat center / contain;
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- main pad --%3E%3Cellipse cx='50' cy='65' rx='22' ry='18'/%3E%3C!-- toe beans --%3E%3Cellipse cx='28' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='42' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='28' rx='7' ry='9'/%3E%3Cellipse cx='72' cy='40' rx='7' ry='9'/%3E%3C/svg%3E") no-repeat center / contain;
 }
