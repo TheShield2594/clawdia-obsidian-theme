@@ -14,15 +14,6 @@ settings:
         format: hex
         default: '#d97742'
     -
-        id: font-text-size
-        title: Body Font Size
-        type: variable-number-slider
-        default: 16
-        min: 14
-        max: 20
-        step: 1
-        format: px
-    -
         id: clawdia-hide-watermark
         title: Hide Paw Watermark
         description: Hide the cat paw watermark on empty workspace panes

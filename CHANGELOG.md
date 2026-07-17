@@ -10,6 +10,7 @@
 - Light-mode contrast fixes (WCAG AA): vault name and property keys `claw-500` (2.92:1) → `claw-700` (5.40:1); code `function`/`tag`/`value`/`important` tokens → `claw-700` on a lightened `cream-100` code background (4.94:1); `--text-warning` → `#8a5d0c` (5.34:1); external link hover → new `moss-600` (6.04:1); active icon states → `claw-600`
 - Light-mode `mark` highlights now match dark mode's border radius and padding
 - README: corrected the scrollbar feature claim (no Firefox-specific styling existed, and Obsidian is Chromium-based)
+- Removed the redundant "Body Font Size" Style Settings slider — Obsidian's native Settings → Appearance font size control sets the same variable inline and always overrides it, so the slider never had any effect
 
 ## 1.3.0
 

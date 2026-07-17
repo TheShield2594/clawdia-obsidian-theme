@@ -18,7 +18,7 @@ Clawdia is a warm, gothic-inspired theme for [Obsidian](https://obsidian.md), bu
 - **Polished details** — Custom blockquotes, tables, checkboxes, tags, highlights, modals, command palette, and more
 - **Paw print watermark** — A subtle cat signature on empty workspace panes
 - **Slim scrollbars** — Unobtrusive 6px scrollbars with themed hover states
-- **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) support** — Customize accent color and font size, or hide the watermark/heading ornament, without editing CSS
+- **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) support** — Customize the accent color, or hide the watermark/heading ornament, without editing CSS
 - **Mobile support** — Themed navbar and drawer for the Obsidian mobile app
 - **AA-contrast text** — Body and accent text checked against WCAG AA contrast ratios in both themes
 
@@ -80,7 +80,6 @@ For the best experience, install [Inter](https://rsms.me/inter/) and [JetBrains 
 Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) community plugin to customize Clawdia without editing CSS:
 
 - **Accent Color** — change the ember-orange accent used for links, buttons, and highlights
-- **Body Font Size** — adjust reading text size from 14–20px
 - **Hide Paw Watermark** — turn off the cat signature on empty panes
 - **Hide Heading Ornament** — turn off the ✦ before H1 headings
 
