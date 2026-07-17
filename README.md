@@ -17,7 +17,7 @@ Clawdia is a warm, gothic-inspired theme for [Obsidian](https://obsidian.md), bu
 - **Canvas support** — Themed canvas background, dots, and card borders
 - **Polished details** — Custom blockquotes, tables, checkboxes, tags, highlights, modals, command palette, and more
 - **Paw print watermark** — A subtle cat signature on empty workspace panes
-- **Cross-browser scrollbars** — Styled for both Chromium and Firefox
+- **Slim scrollbars** — Unobtrusive 6px scrollbars with themed hover states
 - **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) support** — Customize accent color and font size, or hide the watermark/heading ornament, without editing CSS
 - **Mobile support** — Themed navbar and drawer for the Obsidian mobile app
 - **AA-contrast text** — Body and accent text checked against WCAG AA contrast ratios in both themes
